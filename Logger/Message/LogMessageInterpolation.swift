@@ -26,7 +26,15 @@ public struct LogMessageInterpolation: StringInterpolationProtocol {
   }
   
   init(stringLiteral: String) {
-    data.append(stringLiteral)
+    data.append(
+      StringInterpolatingObject(
+        string: stringLiteral,
+        format: nil,
+        align: .none,
+        privacy: .auto,
+        attributes: ""
+      )
+    )
   }
   
   // MARK: - Interpolation
@@ -36,7 +44,15 @@ public struct LogMessageInterpolation: StringInterpolationProtocol {
   /// Appends a string literal.
   /// - Parameter literal: The literal string to add to the message
   public mutating func appendLiteral(_ literal: String) {
-    data.append(literal)
+    data.append(
+      StringInterpolatingObject(
+        string: literal,
+        format: nil,
+        align: .none,
+        privacy: .auto,
+        attributes: ""
+      )
+    )
   }
   
   /// Appends an interpolated string with the specified attributes.
@@ -51,7 +67,15 @@ public struct LogMessageInterpolation: StringInterpolationProtocol {
     privacy: LogPrivacy = .auto,
     attributes: String = ""
   ) {
-    
+    data.append(
+      StringInterpolatingObject(
+        objectClosure: argumentString,
+        format: nil,
+        align: align,
+        privacy: privacy,
+        attributes: attributes
+      )
+    )
   }
   
   // MARK: Appending Integers
@@ -68,7 +92,15 @@ public struct LogMessageInterpolation: StringInterpolationProtocol {
     align: LogStringAlignment = .none,
     privacy: LogPrivacy = .auto
   ) where T: FixedWidthInteger {
-    
+    data.append(
+      IntegerInterpolatingObject(
+        objectClosure: number,
+        format: format,
+        align: align,
+        privacy: privacy,
+        attributes: ""
+      )
+    )
   }
   
   /// Appends an interpolated integer
@@ -83,7 +115,15 @@ public struct LogMessageInterpolation: StringInterpolationProtocol {
     privacy: LogPrivacy = .auto,
     attributes: String = ""
   ) {
-    
+    data.append(
+      ExtendedIntegerInterpolatingObject(
+        objectClosure: number,
+        format: format,
+        align: .none,
+        privacy: privacy,
+        attributes: attributes
+      )
+    )
   }
   
   /// Appends an interpolated 32-bit integer
@@ -98,7 +138,15 @@ public struct LogMessageInterpolation: StringInterpolationProtocol {
     privacy: LogPrivacy = .auto,
     attributes: String = ""
   ) {
-    
+    data.append(
+      ExtendedIntegerInterpolatingObject(
+        objectClosure: number,
+        format: format,
+        align: .none,
+        privacy: privacy,
+        attributes: attributes
+      )
+    )
   }
   
   // MARK: Appending Floating
@@ -117,7 +165,15 @@ public struct LogMessageInterpolation: StringInterpolationProtocol {
     privacy: LogPrivacy = .auto,
     attributes: String = ""
   ) where T: BinaryFloatingPoint {
-    
+    data.append(
+      FloatingInterpolatingOpject(
+        objectClosure: number,
+        format: format,
+        align: align,
+        privacy: privacy,
+        attributes: attributes
+      )
+    )
   }
   
   // MARK: Appending Boolean Values
@@ -132,7 +188,15 @@ public struct LogMessageInterpolation: StringInterpolationProtocol {
     format: LogBoolFormat = .truth,
     privacy: LogPrivacy = .auto
   ) {
-    
+    data.append(
+      BoolInterpolatingObject(
+        objectClosure: boolean,
+        format: format,
+        align: .none,
+        privacy: privacy,
+        attributes: ""
+      )
+    )
   }
   
   // MARK: Appending Generic Types
@@ -149,7 +213,15 @@ public struct LogMessageInterpolation: StringInterpolationProtocol {
     privacy: LogPrivacy = .auto,
     attributes: String = ""
   ) where T: CustomStringConvertible {
-    
+    data.append(
+      CustomStringConvertableInterpolatingObject(
+        objectClosure: value,
+        format: nil,
+        align: align,
+        privacy: privacy,
+        attributes: attributes
+      )
+    )
   }
   
   /// Appends an interpolated type description with the specified attributes.
@@ -164,7 +236,15 @@ public struct LogMessageInterpolation: StringInterpolationProtocol {
     privacy: LogPrivacy = .auto,
     attributes: String = ""
   ) {
-    
+    data.append(
+      TypeInterpolatingObject(
+        objectClosure: value,
+        format: nil,
+        align: align,
+        privacy: privacy,
+        attributes: attributes
+      )
+    )
   }
   
   // MARK: Appending Pointer Data
@@ -183,7 +263,20 @@ public struct LogMessageInterpolation: StringInterpolationProtocol {
     privacy: LogPrivacy = .auto,
     attributes: String = ""
   ) {
+    let container = RawPointerClosureContainer(
+      pointer: pointer,
+      bytes: bytes
+    )
     
+    data.append(
+      RawPointerInterpolatingObject(
+        objectClosure: { container },
+        format: format,
+        align: .none,
+        privacy: privacy,
+        attributes: attributes
+      )
+    )
   }
   
   /// Appends an interpolated collection of raw bytes with the specified attributes.
@@ -198,7 +291,15 @@ public struct LogMessageInterpolation: StringInterpolationProtocol {
     privacy: LogPrivacy = .auto,
     attributes: String = ""
   ) {
-    
+    data.append(
+      RawBufferPointerInterpolatingObject(
+        objectClosure: pointer,
+        format: format,
+        align: .none,
+        privacy: privacy,
+        attributes: attributes
+      )
+    )
   }
   
   // MARK: Appending Objects
@@ -213,7 +314,15 @@ public struct LogMessageInterpolation: StringInterpolationProtocol {
     privacy: LogPrivacy = .auto,
     attributes: String = ""
   ) {
-    
+    data.append(
+      NSObjectInterpolatingObject(
+        objectClosure: argumentObject,
+        format: nil,
+        align: .none,
+        privacy: privacy,
+        attributes: attributes
+      )
+    )
   }
   
 }
