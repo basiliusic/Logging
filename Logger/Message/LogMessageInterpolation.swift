@@ -11,13 +11,11 @@ public struct LogMessageInterpolation: StringInterpolationProtocol {
     
   // MARK: - Types
   
-  public typealias StringLiteralType = String
-  
-  public typealias AppendClosure<T> = () -> T
+  public typealias StringLiteralType = String    
   
   // MARK: - Properties
   
-  var data: [Any] = []
+  var data: [InterpolatingObject] = []
   
   // MARK: - Life cycle
   
