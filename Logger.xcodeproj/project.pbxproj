@@ -47,6 +47,14 @@
 		6D8D9E5B272F0B2100F90C3A /* LogIntegerFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E3D272F0B2000F90C3A /* LogIntegerFormatting.swift */; };
 		6D8D9E5C272F0B2100F90C3A /* LogIntegerFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E3D272F0B2000F90C3A /* LogIntegerFormatting.swift */; };
 		6D8D9E5D272F0B2100F90C3A /* LogIntegerFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E3D272F0B2000F90C3A /* LogIntegerFormatting.swift */; };
+		6D8D9E61272F187400F90C3A /* LogMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E5F272F187400F90C3A /* LogMessage.swift */; };
+		6D8D9E62272F187400F90C3A /* LogMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E5F272F187400F90C3A /* LogMessage.swift */; };
+		6D8D9E63272F187400F90C3A /* LogMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E5F272F187400F90C3A /* LogMessage.swift */; };
+		6D8D9E64272F187400F90C3A /* LogMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E5F272F187400F90C3A /* LogMessage.swift */; };
+		6D8D9E65272F187400F90C3A /* LogMessageInterpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E60272F187400F90C3A /* LogMessageInterpolation.swift */; };
+		6D8D9E66272F187400F90C3A /* LogMessageInterpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E60272F187400F90C3A /* LogMessageInterpolation.swift */; };
+		6D8D9E67272F187400F90C3A /* LogMessageInterpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E60272F187400F90C3A /* LogMessageInterpolation.swift */; };
+		6D8D9E68272F187400F90C3A /* LogMessageInterpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E60272F187400F90C3A /* LogMessageInterpolation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +72,8 @@
 		6D8D9E3B272F0B2000F90C3A /* LogPrivacy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogPrivacy.swift; sourceTree = "<group>"; };
 		6D8D9E3C272F0B2000F90C3A /* LogPointerFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogPointerFormat.swift; sourceTree = "<group>"; };
 		6D8D9E3D272F0B2000F90C3A /* LogIntegerFormatting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogIntegerFormatting.swift; sourceTree = "<group>"; };
+		6D8D9E5F272F187400F90C3A /* LogMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogMessage.swift; sourceTree = "<group>"; };
+		6D8D9E60272F187400F90C3A /* LogMessageInterpolation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogMessageInterpolation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +130,7 @@
 		6D8D9DFC272EFA0700F90C3A /* Logger */ = {
 			isa = PBXGroup;
 			children = (
+				6D8D9E5E272F187400F90C3A /* Message */,
 				6D8D9E34272F0B2000F90C3A /* Formatter */,
 				6D8D9DFD272EFA0700F90C3A /* Logger.h */,
 				6D8D9DFE272EFA0700F90C3A /* Logger.docc */,
@@ -148,6 +159,15 @@
 				6D8D9E3D272F0B2000F90C3A /* LogIntegerFormatting.swift */,
 			);
 			path = Types;
+			sourceTree = "<group>";
+		};
+		6D8D9E5E272F187400F90C3A /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				6D8D9E5F272F187400F90C3A /* LogMessage.swift */,
+				6D8D9E60272F187400F90C3A /* LogMessageInterpolation.swift */,
+			);
+			path = Message;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,8 +366,10 @@
 				6D8D9E5A272F0B2100F90C3A /* LogIntegerFormatting.swift in Sources */,
 				6D8D9E42272F0B2100F90C3A /* LogBoolFormat.swift in Sources */,
 				6D8D9E3E272F0B2000F90C3A /* LogFloatFormatting.swift in Sources */,
+				6D8D9E65272F187400F90C3A /* LogMessageInterpolation.swift in Sources */,
 				6D8D9E56272F0B2100F90C3A /* LogPointerFormat.swift in Sources */,
 				6D8D9DFF272EFA0700F90C3A /* Logger.docc in Sources */,
+				6D8D9E61272F187400F90C3A /* LogMessage.swift in Sources */,
 				6D8D9E4E272F0B2100F90C3A /* LogStringAlignment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,8 +384,10 @@
 				6D8D9E5B272F0B2100F90C3A /* LogIntegerFormatting.swift in Sources */,
 				6D8D9E43272F0B2100F90C3A /* LogBoolFormat.swift in Sources */,
 				6D8D9E3F272F0B2000F90C3A /* LogFloatFormatting.swift in Sources */,
+				6D8D9E66272F187400F90C3A /* LogMessageInterpolation.swift in Sources */,
 				6D8D9E57272F0B2100F90C3A /* LogPointerFormat.swift in Sources */,
 				6D8D9E31272EFAF900F90C3A /* Logger.docc in Sources */,
+				6D8D9E62272F187400F90C3A /* LogMessage.swift in Sources */,
 				6D8D9E4F272F0B2100F90C3A /* LogStringAlignment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,8 +402,10 @@
 				6D8D9E5C272F0B2100F90C3A /* LogIntegerFormatting.swift in Sources */,
 				6D8D9E44272F0B2100F90C3A /* LogBoolFormat.swift in Sources */,
 				6D8D9E40272F0B2000F90C3A /* LogFloatFormatting.swift in Sources */,
+				6D8D9E67272F187400F90C3A /* LogMessageInterpolation.swift in Sources */,
 				6D8D9E58272F0B2100F90C3A /* LogPointerFormat.swift in Sources */,
 				6D8D9E32272EFAF900F90C3A /* Logger.docc in Sources */,
+				6D8D9E63272F187400F90C3A /* LogMessage.swift in Sources */,
 				6D8D9E50272F0B2100F90C3A /* LogStringAlignment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,8 +420,10 @@
 				6D8D9E5D272F0B2100F90C3A /* LogIntegerFormatting.swift in Sources */,
 				6D8D9E45272F0B2100F90C3A /* LogBoolFormat.swift in Sources */,
 				6D8D9E41272F0B2000F90C3A /* LogFloatFormatting.swift in Sources */,
+				6D8D9E68272F187400F90C3A /* LogMessageInterpolation.swift in Sources */,
 				6D8D9E59272F0B2100F90C3A /* LogPointerFormat.swift in Sources */,
 				6D8D9E33272EFAF900F90C3A /* Logger.docc in Sources */,
+				6D8D9E64272F187400F90C3A /* LogMessage.swift in Sources */,
 				6D8D9E51272F0B2100F90C3A /* LogStringAlignment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
