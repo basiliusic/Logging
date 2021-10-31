@@ -23,7 +23,7 @@ public struct LogMessageInterpolation: StringInterpolationProtocol {
   
   public init(literalCapacity: Int, interpolationCount: Int) {
     data.reserveCapacity(
-      interpolationCount + (literalCapacity > 0 ? 1 : 0)
+      interpolationCount * 2 + 1
     )
   }
   
