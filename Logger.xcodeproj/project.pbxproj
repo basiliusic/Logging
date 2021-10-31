@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6D8D9DFA272EFA0700F90C3A /* Logger_Mac_OS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Logger_Mac_OS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D8D9DFA272EFA0700F90C3A /* Logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D8D9DFD272EFA0700F90C3A /* Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
 		6D8D9DFE272EFA0700F90C3A /* Logger.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Logger.docc; sourceTree = "<group>"; };
 		6D8D9E09272EFA3700F90C3A /* Logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,7 +69,7 @@
 		6D8D9DFB272EFA0700F90C3A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6D8D9DFA272EFA0700F90C3A /* Logger_Mac_OS.framework */,
+				6D8D9DFA272EFA0700F90C3A /* Logger.framework */,
 				6D8D9E09272EFA3700F90C3A /* Logger.framework */,
 				6D8D9E17272EFA9400F90C3A /* Logger.framework */,
 				6D8D9E25272EFAAA00F90C3A /* Logger.framework */,
@@ -139,7 +139,7 @@
 			);
 			name = "Logger Mac OS";
 			productName = "Logger Mac OS";
-			productReference = 6D8D9DFA272EFA0700F90C3A /* Logger_Mac_OS.framework */;
+			productReference = 6D8D9DFA272EFA0700F90C3A /* Logger.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		6D8D9E08272EFA3700F90C3A /* Logger iOS */ = {
@@ -310,16 +310,22 @@
 		6D8622A8272EF243008F25F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.basiliusic.logger;
+				PRODUCT_NAME = Logger;
 			};
 			name = Debug;
 		};
 		6D8622A9272EF243008F25F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.basiliusic.logger;
+				PRODUCT_NAME = Logger;
 			};
 			name = Release;
 		};
@@ -360,7 +366,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "$(inherited)";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QG4LUGXB2Z;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -395,8 +401,8 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.basiliusic.logger;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(inherited)";
+				PRODUCT_NAME = "$(inherited)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -445,7 +451,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = "$(inherited)";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QG4LUGXB2Z;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -473,8 +479,8 @@
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.basiliusic.logger;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(inherited)";
+				PRODUCT_NAME = "$(inherited)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -522,7 +528,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "$(inherited)";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QG4LUGXB2Z;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -557,8 +563,8 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.basiliusic.logger;
-				PRODUCT_NAME = Logger;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(inherited)";
+				PRODUCT_NAME = "$(inherited)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
@@ -608,7 +614,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = "$(inherited)";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QG4LUGXB2Z;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -636,8 +642,8 @@
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.basiliusic.logger;
-				PRODUCT_NAME = Logger;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(inherited)";
+				PRODUCT_NAME = "$(inherited)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
@@ -688,7 +694,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "$(inherited)";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QG4LUGXB2Z;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -722,8 +728,8 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.basiliusic.logger;
-				PRODUCT_NAME = Logger;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(inherited)";
+				PRODUCT_NAME = "$(inherited)";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -773,7 +779,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = "$(inherited)";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QG4LUGXB2Z;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -800,8 +806,8 @@
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.basiliusic.logger;
-				PRODUCT_NAME = Logger;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(inherited)";
+				PRODUCT_NAME = "$(inherited)";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -820,7 +826,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -853,7 +859,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "$(inherited)";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QG4LUGXB2Z;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -887,8 +893,8 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.basiliusic.logger;
-				PRODUCT_NAME = Logger;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(inherited)";
+				PRODUCT_NAME = "$(inherited)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -906,7 +912,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -939,7 +945,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = "$(inherited)";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QG4LUGXB2Z;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -966,8 +972,8 @@
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.basiliusic.logger;
-				PRODUCT_NAME = Logger;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(inherited)";
+				PRODUCT_NAME = "$(inherited)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
