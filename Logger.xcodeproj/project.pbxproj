@@ -15,6 +15,38 @@
 		6D8D9E31272EFAF900F90C3A /* Logger.docc in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9DFE272EFA0700F90C3A /* Logger.docc */; };
 		6D8D9E32272EFAF900F90C3A /* Logger.docc in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9DFE272EFA0700F90C3A /* Logger.docc */; };
 		6D8D9E33272EFAF900F90C3A /* Logger.docc in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9DFE272EFA0700F90C3A /* Logger.docc */; };
+		6D8D9E3E272F0B2000F90C3A /* LogFloatFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E36272F0B2000F90C3A /* LogFloatFormatting.swift */; };
+		6D8D9E3F272F0B2000F90C3A /* LogFloatFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E36272F0B2000F90C3A /* LogFloatFormatting.swift */; };
+		6D8D9E40272F0B2000F90C3A /* LogFloatFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E36272F0B2000F90C3A /* LogFloatFormatting.swift */; };
+		6D8D9E41272F0B2000F90C3A /* LogFloatFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E36272F0B2000F90C3A /* LogFloatFormatting.swift */; };
+		6D8D9E42272F0B2100F90C3A /* LogBoolFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E37272F0B2000F90C3A /* LogBoolFormat.swift */; };
+		6D8D9E43272F0B2100F90C3A /* LogBoolFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E37272F0B2000F90C3A /* LogBoolFormat.swift */; };
+		6D8D9E44272F0B2100F90C3A /* LogBoolFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E37272F0B2000F90C3A /* LogBoolFormat.swift */; };
+		6D8D9E45272F0B2100F90C3A /* LogBoolFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E37272F0B2000F90C3A /* LogBoolFormat.swift */; };
+		6D8D9E46272F0B2100F90C3A /* LogIntExtendedFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E38272F0B2000F90C3A /* LogIntExtendedFormat.swift */; };
+		6D8D9E47272F0B2100F90C3A /* LogIntExtendedFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E38272F0B2000F90C3A /* LogIntExtendedFormat.swift */; };
+		6D8D9E48272F0B2100F90C3A /* LogIntExtendedFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E38272F0B2000F90C3A /* LogIntExtendedFormat.swift */; };
+		6D8D9E49272F0B2100F90C3A /* LogIntExtendedFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E38272F0B2000F90C3A /* LogIntExtendedFormat.swift */; };
+		6D8D9E4A272F0B2100F90C3A /* LogInt32ExtendedFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E39272F0B2000F90C3A /* LogInt32ExtendedFormat.swift */; };
+		6D8D9E4B272F0B2100F90C3A /* LogInt32ExtendedFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E39272F0B2000F90C3A /* LogInt32ExtendedFormat.swift */; };
+		6D8D9E4C272F0B2100F90C3A /* LogInt32ExtendedFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E39272F0B2000F90C3A /* LogInt32ExtendedFormat.swift */; };
+		6D8D9E4D272F0B2100F90C3A /* LogInt32ExtendedFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E39272F0B2000F90C3A /* LogInt32ExtendedFormat.swift */; };
+		6D8D9E4E272F0B2100F90C3A /* LogStringAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E3A272F0B2000F90C3A /* LogStringAlignment.swift */; };
+		6D8D9E4F272F0B2100F90C3A /* LogStringAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E3A272F0B2000F90C3A /* LogStringAlignment.swift */; };
+		6D8D9E50272F0B2100F90C3A /* LogStringAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E3A272F0B2000F90C3A /* LogStringAlignment.swift */; };
+		6D8D9E51272F0B2100F90C3A /* LogStringAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E3A272F0B2000F90C3A /* LogStringAlignment.swift */; };
+		6D8D9E52272F0B2100F90C3A /* LogPrivacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E3B272F0B2000F90C3A /* LogPrivacy.swift */; };
+		6D8D9E53272F0B2100F90C3A /* LogPrivacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E3B272F0B2000F90C3A /* LogPrivacy.swift */; };
+		6D8D9E54272F0B2100F90C3A /* LogPrivacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E3B272F0B2000F90C3A /* LogPrivacy.swift */; };
+		6D8D9E55272F0B2100F90C3A /* LogPrivacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E3B272F0B2000F90C3A /* LogPrivacy.swift */; };
+		6D8D9E56272F0B2100F90C3A /* LogPointerFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E3C272F0B2000F90C3A /* LogPointerFormat.swift */; };
+		6D8D9E57272F0B2100F90C3A /* LogPointerFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E3C272F0B2000F90C3A /* LogPointerFormat.swift */; };
+		6D8D9E58272F0B2100F90C3A /* LogPointerFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E3C272F0B2000F90C3A /* LogPointerFormat.swift */; };
+		6D8D9E59272F0B2100F90C3A /* LogPointerFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E3C272F0B2000F90C3A /* LogPointerFormat.swift */; };
+		6D8D9E5A272F0B2100F90C3A /* LogIntegerFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E3D272F0B2000F90C3A /* LogIntegerFormatting.swift */; };
+		6D8D9E5B272F0B2100F90C3A /* LogIntegerFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E3D272F0B2000F90C3A /* LogIntegerFormatting.swift */; };
+		6D8D9E5C272F0B2100F90C3A /* LogIntegerFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E3D272F0B2000F90C3A /* LogIntegerFormatting.swift */; };
+		6D8D9E5D272F0B2100F90C3A /* LogIntegerFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E3D272F0B2000F90C3A /* LogIntegerFormatting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +56,14 @@
 		6D8D9E09272EFA3700F90C3A /* Logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D8D9E17272EFA9400F90C3A /* Logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D8D9E25272EFAAA00F90C3A /* Logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D8D9E36272F0B2000F90C3A /* LogFloatFormatting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogFloatFormatting.swift; sourceTree = "<group>"; };
+		6D8D9E37272F0B2000F90C3A /* LogBoolFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogBoolFormat.swift; sourceTree = "<group>"; };
+		6D8D9E38272F0B2000F90C3A /* LogIntExtendedFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogIntExtendedFormat.swift; sourceTree = "<group>"; };
+		6D8D9E39272F0B2000F90C3A /* LogInt32ExtendedFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInt32ExtendedFormat.swift; sourceTree = "<group>"; };
+		6D8D9E3A272F0B2000F90C3A /* LogStringAlignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogStringAlignment.swift; sourceTree = "<group>"; };
+		6D8D9E3B272F0B2000F90C3A /* LogPrivacy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogPrivacy.swift; sourceTree = "<group>"; };
+		6D8D9E3C272F0B2000F90C3A /* LogPointerFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogPointerFormat.swift; sourceTree = "<group>"; };
+		6D8D9E3D272F0B2000F90C3A /* LogIntegerFormatting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogIntegerFormatting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,10 +120,34 @@
 		6D8D9DFC272EFA0700F90C3A /* Logger */ = {
 			isa = PBXGroup;
 			children = (
+				6D8D9E34272F0B2000F90C3A /* Formatter */,
 				6D8D9DFD272EFA0700F90C3A /* Logger.h */,
 				6D8D9DFE272EFA0700F90C3A /* Logger.docc */,
 			);
 			path = Logger;
+			sourceTree = "<group>";
+		};
+		6D8D9E34272F0B2000F90C3A /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				6D8D9E35272F0B2000F90C3A /* Types */,
+			);
+			path = Formatter;
+			sourceTree = "<group>";
+		};
+		6D8D9E35272F0B2000F90C3A /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				6D8D9E36272F0B2000F90C3A /* LogFloatFormatting.swift */,
+				6D8D9E37272F0B2000F90C3A /* LogBoolFormat.swift */,
+				6D8D9E38272F0B2000F90C3A /* LogIntExtendedFormat.swift */,
+				6D8D9E39272F0B2000F90C3A /* LogInt32ExtendedFormat.swift */,
+				6D8D9E3A272F0B2000F90C3A /* LogStringAlignment.swift */,
+				6D8D9E3B272F0B2000F90C3A /* LogPrivacy.swift */,
+				6D8D9E3C272F0B2000F90C3A /* LogPointerFormat.swift */,
+				6D8D9E3D272F0B2000F90C3A /* LogIntegerFormatting.swift */,
+			);
+			path = Types;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,7 +340,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D8D9E52272F0B2100F90C3A /* LogPrivacy.swift in Sources */,
+				6D8D9E46272F0B2100F90C3A /* LogIntExtendedFormat.swift in Sources */,
+				6D8D9E4A272F0B2100F90C3A /* LogInt32ExtendedFormat.swift in Sources */,
+				6D8D9E5A272F0B2100F90C3A /* LogIntegerFormatting.swift in Sources */,
+				6D8D9E42272F0B2100F90C3A /* LogBoolFormat.swift in Sources */,
+				6D8D9E3E272F0B2000F90C3A /* LogFloatFormatting.swift in Sources */,
+				6D8D9E56272F0B2100F90C3A /* LogPointerFormat.swift in Sources */,
 				6D8D9DFF272EFA0700F90C3A /* Logger.docc in Sources */,
+				6D8D9E4E272F0B2100F90C3A /* LogStringAlignment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +356,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D8D9E53272F0B2100F90C3A /* LogPrivacy.swift in Sources */,
+				6D8D9E47272F0B2100F90C3A /* LogIntExtendedFormat.swift in Sources */,
+				6D8D9E4B272F0B2100F90C3A /* LogInt32ExtendedFormat.swift in Sources */,
+				6D8D9E5B272F0B2100F90C3A /* LogIntegerFormatting.swift in Sources */,
+				6D8D9E43272F0B2100F90C3A /* LogBoolFormat.swift in Sources */,
+				6D8D9E3F272F0B2000F90C3A /* LogFloatFormatting.swift in Sources */,
+				6D8D9E57272F0B2100F90C3A /* LogPointerFormat.swift in Sources */,
 				6D8D9E31272EFAF900F90C3A /* Logger.docc in Sources */,
+				6D8D9E4F272F0B2100F90C3A /* LogStringAlignment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +372,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D8D9E54272F0B2100F90C3A /* LogPrivacy.swift in Sources */,
+				6D8D9E48272F0B2100F90C3A /* LogIntExtendedFormat.swift in Sources */,
+				6D8D9E4C272F0B2100F90C3A /* LogInt32ExtendedFormat.swift in Sources */,
+				6D8D9E5C272F0B2100F90C3A /* LogIntegerFormatting.swift in Sources */,
+				6D8D9E44272F0B2100F90C3A /* LogBoolFormat.swift in Sources */,
+				6D8D9E40272F0B2000F90C3A /* LogFloatFormatting.swift in Sources */,
+				6D8D9E58272F0B2100F90C3A /* LogPointerFormat.swift in Sources */,
 				6D8D9E32272EFAF900F90C3A /* Logger.docc in Sources */,
+				6D8D9E50272F0B2100F90C3A /* LogStringAlignment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +388,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D8D9E55272F0B2100F90C3A /* LogPrivacy.swift in Sources */,
+				6D8D9E49272F0B2100F90C3A /* LogIntExtendedFormat.swift in Sources */,
+				6D8D9E4D272F0B2100F90C3A /* LogInt32ExtendedFormat.swift in Sources */,
+				6D8D9E5D272F0B2100F90C3A /* LogIntegerFormatting.swift in Sources */,
+				6D8D9E45272F0B2100F90C3A /* LogBoolFormat.swift in Sources */,
+				6D8D9E41272F0B2000F90C3A /* LogFloatFormatting.swift in Sources */,
+				6D8D9E59272F0B2100F90C3A /* LogPointerFormat.swift in Sources */,
 				6D8D9E33272EFAF900F90C3A /* Logger.docc in Sources */,
+				6D8D9E51272F0B2100F90C3A /* LogStringAlignment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
