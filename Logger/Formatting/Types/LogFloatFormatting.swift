@@ -17,7 +17,7 @@ public struct LogFloatFormatting {
     case hybrid
   }
   
-  public typealias PrecisionClosure = () -> Int
+  public typealias PrecisionClosure = AppendClosure<Int>
   
   // MARK: - Constants
   
@@ -37,10 +37,6 @@ public struct LogFloatFormatting {
   
   public static var fixed: Self {
     .init(format: .fixed)
-  }
-  
-  public static var hex: Self {
-    .init(format: .hex)
   }
   
   public static var exponential: Self {
@@ -76,19 +72,7 @@ public struct LogFloatFormatting {
       precision: precision
     )
   }
-  
-  public static func hex(
-    explicitPositiveSign: Bool = Self.defaultExplicitPositiveSign,
-    uppercase: Bool = Self.defaultUppercase
-  ) -> Self {
-    .init(
-      format: .hex,
-      explicitPositiveSign: explicitPositiveSign,
-      uppercase: uppercase,
-      precision: { Self.defaultPrecision }
-    )
-  }
-  
+
   public static func hybrid(
     precision: @autoclosure @escaping PrecisionClosure = Self.defaultPrecision,
     explicitPositiveSign: Bool = Self.defaultExplicitPositiveSign,
