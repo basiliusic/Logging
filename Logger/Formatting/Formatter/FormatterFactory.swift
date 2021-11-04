@@ -71,7 +71,7 @@ final class FormatterFactory {
       // Floating
     case let container as FloatingInterpolatingObject<Float>:
       return makeFloatingFormatter(for: container)
-#if os(iOS)
+#if os(iOS) || os(tvOS) || os(watchOS)
     case let container as FloatingInterpolatingObject<Float16>:
       return makeFloatingFormatter(for: container)
 #endif
