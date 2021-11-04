@@ -9,4 +9,13 @@
 public enum LogBoolFormat: Int {
   case truth
   case answer
+  
+  init(from format: LogInt32ExtendedFormat) {
+    switch format {
+    case .answer:
+      self = .answer
+    default:
+      self = .truth
+    }
+  }
 }

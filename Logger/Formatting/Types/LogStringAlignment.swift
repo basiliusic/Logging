@@ -16,7 +16,7 @@ public struct LogStringAlignment {
     case right
   }
   
-  public typealias ColumnsClosure = () -> Int
+  public typealias ColumnsClosure = AppendClosure<Int>
   
   // MARK: - Properties
   

@@ -16,14 +16,16 @@ public struct LogIntegerFormatting {
     case octal
   }
   
-  public typealias MinDigitsClosure = () -> Int
+  public typealias MinDigitsClosure = AppendClosure<Int>
   
   // MARK: - Constants
   
   public static let defaultExplicitPositiveSign = false
   public static let defaultIncludePrefix = true
   public static let defaultUppercase = true
-  public static let defaultMinDigits = 1
+  public static let defaultDecimalMinDigits = 1
+  public static let defaultOctalMinDigits = 1
+  public static let defaultHexMinDigits = 2
   
   // MARK: - Properties
   
@@ -31,25 +33,25 @@ public struct LogIntegerFormatting {
   var explicitPositiveSign: Bool = Self.defaultExplicitPositiveSign
   var includePrefix: Bool = Self.defaultIncludePrefix
   var uppercase: Bool = Self.defaultUppercase
-  var minDigits: MinDigitsClosure = { Self.defaultMinDigits }
+  var minDigits: MinDigitsClosure
   
   // MARK: - Factory
   
   public static var decimal: Self {
-    return .init(format: .decimal)
+    return .init(format: .decimal, minDigits: { Self.defaultDecimalMinDigits })
   }
   
   public static var hex: Self {
-    return .init(format: .hex)
+    return .init(format: .hex, minDigits: { Self.defaultHexMinDigits })
   }
   
   public static var octal: Self {
-    return .init(format: .octal)
+    return .init(format: .octal, minDigits: { Self.defaultOctalMinDigits })
   }
   
   public static func decimal(
     explicitPositiveSign: Bool = Self.defaultExplicitPositiveSign,
-    minDigits: @autoclosure @escaping MinDigitsClosure = Self.defaultMinDigits
+    minDigits: @autoclosure @escaping AppendClosure<Int> = Self.defaultDecimalMinDigits
   ) -> Self {
     .init(
       format: .decimal,
@@ -64,7 +66,7 @@ public struct LogIntegerFormatting {
     explicitPositiveSign: Bool = Self.defaultExplicitPositiveSign,
     includePrefix: Bool = Self.defaultIncludePrefix,
     uppercase: Bool = Self.defaultUppercase,
-    minDigits: @autoclosure @escaping MinDigitsClosure = Self.defaultMinDigits
+    minDigits: @autoclosure @escaping MinDigitsClosure = Self.defaultHexMinDigits
   ) -> Self {
     .init(
       format: .hex,
@@ -79,7 +81,7 @@ public struct LogIntegerFormatting {
     explicitPositiveSign: Bool = Self.defaultExplicitPositiveSign,
     includePrefix: Bool = Self.defaultIncludePrefix,
     uppercase: Bool = Self.defaultUppercase,
-    minDigits: @autoclosure @escaping MinDigitsClosure = Self.defaultMinDigits
+    minDigits: @autoclosure @escaping MinDigitsClosure = Self.defaultOctalMinDigits
   ) -> Self {
     .init(
       format: .octal,

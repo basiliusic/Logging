@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D5B7931273179250035A5BE /* BytesFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5B7930273179250035A5BE /* BytesFormatter.swift */; };
+		6D5B7932273179250035A5BE /* BytesFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5B7930273179250035A5BE /* BytesFormatter.swift */; };
+		6D5B7933273179250035A5BE /* BytesFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5B7930273179250035A5BE /* BytesFormatter.swift */; };
+		6D5B7934273179250035A5BE /* BytesFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5B7930273179250035A5BE /* BytesFormatter.swift */; };
+		6D5B79362731B03A0035A5BE /* RawBufferPointerFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5B79352731B03A0035A5BE /* RawBufferPointerFormatter.swift */; };
+		6D5B79372731B03A0035A5BE /* RawBufferPointerFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5B79352731B03A0035A5BE /* RawBufferPointerFormatter.swift */; };
+		6D5B79382731B03A0035A5BE /* RawBufferPointerFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5B79352731B03A0035A5BE /* RawBufferPointerFormatter.swift */; };
+		6D5B79392731B03A0035A5BE /* RawBufferPointerFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5B79352731B03A0035A5BE /* RawBufferPointerFormatter.swift */; };
 		6D8D9DFF272EFA0700F90C3A /* Logger.docc in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9DFE272EFA0700F90C3A /* Logger.docc */; };
 		6D8D9E00272EFA0700F90C3A /* Logger.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D8D9DFD272EFA0700F90C3A /* Logger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6D8D9E2E272EFAEC00F90C3A /* Logger.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D8D9DFD272EFA0700F90C3A /* Logger.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -67,9 +75,75 @@
 		6D8D9E80272F3B7400F90C3A /* RawPointerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E7E272F3B7400F90C3A /* RawPointerContainer.swift */; };
 		6D8D9E81272F3B7400F90C3A /* RawPointerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E7E272F3B7400F90C3A /* RawPointerContainer.swift */; };
 		6D8D9E82272F3B7400F90C3A /* RawPointerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E7E272F3B7400F90C3A /* RawPointerContainer.swift */; };
+		6D8D9E85272F616600F90C3A /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E83272F616600F90C3A /* LogLevel.swift */; };
+		6D8D9E86272F616600F90C3A /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E83272F616600F90C3A /* LogLevel.swift */; };
+		6D8D9E87272F616600F90C3A /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E83272F616600F90C3A /* LogLevel.swift */; };
+		6D8D9E88272F616600F90C3A /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E83272F616600F90C3A /* LogLevel.swift */; };
+		6D8D9E89272F616600F90C3A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E84272F616600F90C3A /* Logger.swift */; };
+		6D8D9E8A272F616600F90C3A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E84272F616600F90C3A /* Logger.swift */; };
+		6D8D9E8B272F616600F90C3A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E84272F616600F90C3A /* Logger.swift */; };
+		6D8D9E8C272F616600F90C3A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E84272F616600F90C3A /* Logger.swift */; };
+		6D8D9E8F273015F000F90C3A /* LogDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E8E273015F000F90C3A /* LogDestination.swift */; };
+		6D8D9E90273015F000F90C3A /* LogDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E8E273015F000F90C3A /* LogDestination.swift */; };
+		6D8D9E91273015F000F90C3A /* LogDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E8E273015F000F90C3A /* LogDestination.swift */; };
+		6D8D9E92273015F000F90C3A /* LogDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E8E273015F000F90C3A /* LogDestination.swift */; };
+		6D8D9E942730195900F90C3A /* BinaryFloatingFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E932730195900F90C3A /* BinaryFloatingFormatter.swift */; };
+		6D8D9E952730195900F90C3A /* BinaryFloatingFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E932730195900F90C3A /* BinaryFloatingFormatter.swift */; };
+		6D8D9E962730195900F90C3A /* BinaryFloatingFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E932730195900F90C3A /* BinaryFloatingFormatter.swift */; };
+		6D8D9E972730195900F90C3A /* BinaryFloatingFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E932730195900F90C3A /* BinaryFloatingFormatter.swift */; };
+		6D8D9E99273019F800F90C3A /* BoolFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E98273019F800F90C3A /* BoolFormatter.swift */; };
+		6D8D9E9A273019F800F90C3A /* BoolFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E98273019F800F90C3A /* BoolFormatter.swift */; };
+		6D8D9E9B273019F800F90C3A /* BoolFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E98273019F800F90C3A /* BoolFormatter.swift */; };
+		6D8D9E9C273019F800F90C3A /* BoolFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E98273019F800F90C3A /* BoolFormatter.swift */; };
+		6D8D9E9E27301AA000F90C3A /* AlignmentFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E9D27301AA000F90C3A /* AlignmentFormatter.swift */; };
+		6D8D9E9F27301AA000F90C3A /* AlignmentFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E9D27301AA000F90C3A /* AlignmentFormatter.swift */; };
+		6D8D9EA027301AA000F90C3A /* AlignmentFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E9D27301AA000F90C3A /* AlignmentFormatter.swift */; };
+		6D8D9EA127301AA000F90C3A /* AlignmentFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9E9D27301AA000F90C3A /* AlignmentFormatter.swift */; };
+		6D8D9EA327301AFD00F90C3A /* FixedWidthIntegerFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9EA227301AFD00F90C3A /* FixedWidthIntegerFormatter.swift */; };
+		6D8D9EA427301AFD00F90C3A /* FixedWidthIntegerFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9EA227301AFD00F90C3A /* FixedWidthIntegerFormatter.swift */; };
+		6D8D9EA527301AFD00F90C3A /* FixedWidthIntegerFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9EA227301AFD00F90C3A /* FixedWidthIntegerFormatter.swift */; };
+		6D8D9EA627301AFD00F90C3A /* FixedWidthIntegerFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9EA227301AFD00F90C3A /* FixedWidthIntegerFormatter.swift */; };
+		6D8D9EA827301B8500F90C3A /* FixedWidthIntegerExtendedFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9EA727301B8500F90C3A /* FixedWidthIntegerExtendedFormatter.swift */; };
+		6D8D9EA927301B8500F90C3A /* FixedWidthIntegerExtendedFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9EA727301B8500F90C3A /* FixedWidthIntegerExtendedFormatter.swift */; };
+		6D8D9EAA27301B8500F90C3A /* FixedWidthIntegerExtendedFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9EA727301B8500F90C3A /* FixedWidthIntegerExtendedFormatter.swift */; };
+		6D8D9EAB27301B8500F90C3A /* FixedWidthIntegerExtendedFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9EA727301B8500F90C3A /* FixedWidthIntegerExtendedFormatter.swift */; };
+		6D8D9EB227301BF700F90C3A /* RawPointerFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9EB127301BF700F90C3A /* RawPointerFormatter.swift */; };
+		6D8D9EB327301BF700F90C3A /* RawPointerFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9EB127301BF700F90C3A /* RawPointerFormatter.swift */; };
+		6D8D9EB427301BF700F90C3A /* RawPointerFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9EB127301BF700F90C3A /* RawPointerFormatter.swift */; };
+		6D8D9EB527301BF700F90C3A /* RawPointerFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9EB127301BF700F90C3A /* RawPointerFormatter.swift */; };
+		6D8D9EB82730411500F90C3A /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9EB72730411500F90C3A /* Formatter.swift */; };
+		6D8D9EB92730411500F90C3A /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9EB72730411500F90C3A /* Formatter.swift */; };
+		6D8D9EBA2730411500F90C3A /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9EB72730411500F90C3A /* Formatter.swift */; };
+		6D8D9EBB2730411500F90C3A /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9EB72730411500F90C3A /* Formatter.swift */; };
+		6D8D9EBE27307FDF00F90C3A /* IP4AddressFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9EBD27307FDF00F90C3A /* IP4AddressFormatter.swift */; };
+		6D8D9EBF27307FDF00F90C3A /* IP4AddressFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9EBD27307FDF00F90C3A /* IP4AddressFormatter.swift */; };
+		6D8D9EC027307FDF00F90C3A /* IP4AddressFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9EBD27307FDF00F90C3A /* IP4AddressFormatter.swift */; };
+		6D8D9EC127307FDF00F90C3A /* IP4AddressFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9EBD27307FDF00F90C3A /* IP4AddressFormatter.swift */; };
+		6D8D9EC32730840B00F90C3A /* FixedWidthIntegerDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9EC22730840B00F90C3A /* FixedWidthIntegerDateFormatter.swift */; };
+		6D8D9EC42730840B00F90C3A /* FixedWidthIntegerDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9EC22730840B00F90C3A /* FixedWidthIntegerDateFormatter.swift */; };
+		6D8D9EC52730840B00F90C3A /* FixedWidthIntegerDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9EC22730840B00F90C3A /* FixedWidthIntegerDateFormatter.swift */; };
+		6D8D9EC62730840B00F90C3A /* FixedWidthIntegerDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9EC22730840B00F90C3A /* FixedWidthIntegerDateFormatter.swift */; };
+		6D8D9EC827308FDB00F90C3A /* DarwinErrnoFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9EC727308FDB00F90C3A /* DarwinErrnoFormatter.swift */; };
+		6D8D9EC927308FDB00F90C3A /* DarwinErrnoFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9EC727308FDB00F90C3A /* DarwinErrnoFormatter.swift */; };
+		6D8D9ECA27308FDB00F90C3A /* DarwinErrnoFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9EC727308FDB00F90C3A /* DarwinErrnoFormatter.swift */; };
+		6D8D9ECB27308FDB00F90C3A /* DarwinErrnoFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9EC727308FDB00F90C3A /* DarwinErrnoFormatter.swift */; };
+		6D8D9ECD2730B70700F90C3A /* DarwinSignalFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9ECC2730B70700F90C3A /* DarwinSignalFormatter.swift */; };
+		6D8D9ECE2730B70700F90C3A /* DarwinSignalFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9ECC2730B70700F90C3A /* DarwinSignalFormatter.swift */; };
+		6D8D9ECF2730B70700F90C3A /* DarwinSignalFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9ECC2730B70700F90C3A /* DarwinSignalFormatter.swift */; };
+		6D8D9ED02730B70700F90C3A /* DarwinSignalFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9ECC2730B70700F90C3A /* DarwinSignalFormatter.swift */; };
+		6D8D9ED22730B95500F90C3A /* DarwinModeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9ED12730B95500F90C3A /* DarwinModeFormatter.swift */; };
+		6D8D9ED32730B95500F90C3A /* DarwinModeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9ED12730B95500F90C3A /* DarwinModeFormatter.swift */; };
+		6D8D9ED42730B95500F90C3A /* DarwinModeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9ED12730B95500F90C3A /* DarwinModeFormatter.swift */; };
+		6D8D9ED52730B95500F90C3A /* DarwinModeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9ED12730B95500F90C3A /* DarwinModeFormatter.swift */; };
+		6D8D9ED72730BDED00F90C3A /* FileAccessMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9ED62730BDED00F90C3A /* FileAccessMask.swift */; };
+		6D8D9ED82730BDED00F90C3A /* FileAccessMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9ED62730BDED00F90C3A /* FileAccessMask.swift */; };
+		6D8D9ED92730BDED00F90C3A /* FileAccessMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9ED62730BDED00F90C3A /* FileAccessMask.swift */; };
+		6D8D9EDA2730BDED00F90C3A /* FileAccessMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D9ED62730BDED00F90C3A /* FileAccessMask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D5B7930273179250035A5BE /* BytesFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytesFormatter.swift; sourceTree = "<group>"; };
+		6D5B79352731B03A0035A5BE /* RawBufferPointerFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawBufferPointerFormatter.swift; sourceTree = "<group>"; };
 		6D8D9DFA272EFA0700F90C3A /* Logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D8D9DFD272EFA0700F90C3A /* Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
 		6D8D9DFE272EFA0700F90C3A /* Logger.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Logger.docc; sourceTree = "<group>"; };
@@ -89,6 +163,22 @@
 		6D8D9E6E272F24BC00F90C3A /* InterpolatingObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterpolatingObject.swift; sourceTree = "<group>"; };
 		6D8D9E79272F2BD100F90C3A /* AppendClosure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppendClosure.swift; sourceTree = "<group>"; };
 		6D8D9E7E272F3B7400F90C3A /* RawPointerContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawPointerContainer.swift; sourceTree = "<group>"; };
+		6D8D9E83272F616600F90C3A /* LogLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
+		6D8D9E84272F616600F90C3A /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		6D8D9E8E273015F000F90C3A /* LogDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDestination.swift; sourceTree = "<group>"; };
+		6D8D9E932730195900F90C3A /* BinaryFloatingFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryFloatingFormatter.swift; sourceTree = "<group>"; };
+		6D8D9E98273019F800F90C3A /* BoolFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolFormatter.swift; sourceTree = "<group>"; };
+		6D8D9E9D27301AA000F90C3A /* AlignmentFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignmentFormatter.swift; sourceTree = "<group>"; };
+		6D8D9EA227301AFD00F90C3A /* FixedWidthIntegerFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedWidthIntegerFormatter.swift; sourceTree = "<group>"; };
+		6D8D9EA727301B8500F90C3A /* FixedWidthIntegerExtendedFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedWidthIntegerExtendedFormatter.swift; sourceTree = "<group>"; };
+		6D8D9EB127301BF700F90C3A /* RawPointerFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawPointerFormatter.swift; sourceTree = "<group>"; };
+		6D8D9EB72730411500F90C3A /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		6D8D9EBD27307FDF00F90C3A /* IP4AddressFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IP4AddressFormatter.swift; sourceTree = "<group>"; };
+		6D8D9EC22730840B00F90C3A /* FixedWidthIntegerDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedWidthIntegerDateFormatter.swift; sourceTree = "<group>"; };
+		6D8D9EC727308FDB00F90C3A /* DarwinErrnoFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarwinErrnoFormatter.swift; sourceTree = "<group>"; };
+		6D8D9ECC2730B70700F90C3A /* DarwinSignalFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarwinSignalFormatter.swift; sourceTree = "<group>"; };
+		6D8D9ED12730B95500F90C3A /* DarwinModeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarwinModeFormatter.swift; sourceTree = "<group>"; };
+		6D8D9ED62730BDED00F90C3A /* FileAccessMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileAccessMask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,8 +235,11 @@
 		6D8D9DFC272EFA0700F90C3A /* Logger */ = {
 			isa = PBXGroup;
 			children = (
+				6D8D9E84272F616600F90C3A /* Logger.swift */,
+				6D8D9E83272F616600F90C3A /* LogLevel.swift */,
+				6D8D9E8D273015F000F90C3A /* Destination */,
 				6D8D9E5E272F187400F90C3A /* Message */,
-				6D8D9E34272F0B2000F90C3A /* Formatter */,
+				6D8D9E34272F0B2000F90C3A /* Formatting */,
 				6D8D9E73272F2AD400F90C3A /* Support */,
 				6D8D9DFD272EFA0700F90C3A /* Logger.h */,
 				6D8D9DFE272EFA0700F90C3A /* Logger.docc */,
@@ -154,12 +247,13 @@
 			path = Logger;
 			sourceTree = "<group>";
 		};
-		6D8D9E34272F0B2000F90C3A /* Formatter */ = {
+		6D8D9E34272F0B2000F90C3A /* Formatting */ = {
 			isa = PBXGroup;
 			children = (
 				6D8D9E35272F0B2000F90C3A /* Types */,
+				6D8D9EB6273040F500F90C3A /* Formatter */,
 			);
-			path = Formatter;
+			path = Formatting;
 			sourceTree = "<group>";
 		};
 		6D8D9E35272F0B2000F90C3A /* Types */ = {
@@ -192,8 +286,46 @@
 			children = (
 				6D8D9E79272F2BD100F90C3A /* AppendClosure.swift */,
 				6D8D9E7E272F3B7400F90C3A /* RawPointerContainer.swift */,
+				6D8D9ED62730BDED00F90C3A /* FileAccessMask.swift */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		6D8D9E8D273015F000F90C3A /* Destination */ = {
+			isa = PBXGroup;
+			children = (
+				6D8D9E8E273015F000F90C3A /* LogDestination.swift */,
+			);
+			path = Destination;
+			sourceTree = "<group>";
+		};
+		6D8D9EB6273040F500F90C3A /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				6D8D9EBC27307FBE00F90C3A /* ExtendedInt */,
+				6D8D9EB72730411500F90C3A /* Formatter.swift */,
+				6D8D9E932730195900F90C3A /* BinaryFloatingFormatter.swift */,
+				6D8D9E98273019F800F90C3A /* BoolFormatter.swift */,
+				6D8D9E9D27301AA000F90C3A /* AlignmentFormatter.swift */,
+				6D8D9EA227301AFD00F90C3A /* FixedWidthIntegerFormatter.swift */,
+				6D8D9EB127301BF700F90C3A /* RawPointerFormatter.swift */,
+				6D5B79352731B03A0035A5BE /* RawBufferPointerFormatter.swift */,
+			);
+			path = Formatter;
+			sourceTree = "<group>";
+		};
+		6D8D9EBC27307FBE00F90C3A /* ExtendedInt */ = {
+			isa = PBXGroup;
+			children = (
+				6D8D9EA727301B8500F90C3A /* FixedWidthIntegerExtendedFormatter.swift */,
+				6D8D9EBD27307FDF00F90C3A /* IP4AddressFormatter.swift */,
+				6D8D9EC22730840B00F90C3A /* FixedWidthIntegerDateFormatter.swift */,
+				6D8D9EC727308FDB00F90C3A /* DarwinErrnoFormatter.swift */,
+				6D8D9ECC2730B70700F90C3A /* DarwinSignalFormatter.swift */,
+				6D8D9ED12730B95500F90C3A /* DarwinModeFormatter.swift */,
+				6D5B7930273179250035A5BE /* BytesFormatter.swift */,
+			);
+			path = ExtendedInt;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,19 +518,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D8D9E99273019F800F90C3A /* BoolFormatter.swift in Sources */,
 				6D8D9E52272F0B2100F90C3A /* LogPrivacy.swift in Sources */,
 				6D8D9E4A272F0B2100F90C3A /* LogInt32ExtendedFormat.swift in Sources */,
+				6D8D9ED72730BDED00F90C3A /* FileAccessMask.swift in Sources */,
 				6D8D9E5A272F0B2100F90C3A /* LogIntegerFormatting.swift in Sources */,
+				6D8D9EA827301B8500F90C3A /* FixedWidthIntegerExtendedFormatter.swift in Sources */,
+				6D8D9EA327301AFD00F90C3A /* FixedWidthIntegerFormatter.swift in Sources */,
+				6D8D9E8F273015F000F90C3A /* LogDestination.swift in Sources */,
 				6D8D9E6A272F239400F90C3A /* InterpolatingObjectContainer.swift in Sources */,
 				6D8D9E42272F0B2100F90C3A /* LogBoolFormat.swift in Sources */,
 				6D8D9E7F272F3B7400F90C3A /* RawPointerContainer.swift in Sources */,
 				6D8D9E3E272F0B2000F90C3A /* LogFloatFormatting.swift in Sources */,
+				6D8D9E89272F616600F90C3A /* Logger.swift in Sources */,
 				6D8D9E65272F187400F90C3A /* LogMessageInterpolation.swift in Sources */,
+				6D8D9EB227301BF700F90C3A /* RawPointerFormatter.swift in Sources */,
+				6D8D9EBE27307FDF00F90C3A /* IP4AddressFormatter.swift in Sources */,
 				6D8D9E56272F0B2100F90C3A /* LogPointerFormat.swift in Sources */,
 				6D8D9DFF272EFA0700F90C3A /* Logger.docc in Sources */,
+				6D8D9EC32730840B00F90C3A /* FixedWidthIntegerDateFormatter.swift in Sources */,
+				6D5B79362731B03A0035A5BE /* RawBufferPointerFormatter.swift in Sources */,
+				6D8D9EB82730411500F90C3A /* Formatter.swift in Sources */,
 				6D8D9E61272F187400F90C3A /* LogMessage.swift in Sources */,
+				6D8D9E9E27301AA000F90C3A /* AlignmentFormatter.swift in Sources */,
 				6D8D9E4E272F0B2100F90C3A /* LogStringAlignment.swift in Sources */,
+				6D8D9EC827308FDB00F90C3A /* DarwinErrnoFormatter.swift in Sources */,
+				6D8D9E942730195900F90C3A /* BinaryFloatingFormatter.swift in Sources */,
+				6D5B7931273179250035A5BE /* BytesFormatter.swift in Sources */,
 				6D8D9E6F272F24BC00F90C3A /* InterpolatingObject.swift in Sources */,
+				6D8D9ECD2730B70700F90C3A /* DarwinSignalFormatter.swift in Sources */,
+				6D8D9ED22730B95500F90C3A /* DarwinModeFormatter.swift in Sources */,
+				6D8D9E85272F616600F90C3A /* LogLevel.swift in Sources */,
 				6D8D9E7A272F2BD100F90C3A /* AppendClosure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,19 +557,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D8D9E9A273019F800F90C3A /* BoolFormatter.swift in Sources */,
 				6D8D9E53272F0B2100F90C3A /* LogPrivacy.swift in Sources */,
 				6D8D9E4B272F0B2100F90C3A /* LogInt32ExtendedFormat.swift in Sources */,
+				6D8D9ED82730BDED00F90C3A /* FileAccessMask.swift in Sources */,
 				6D8D9E5B272F0B2100F90C3A /* LogIntegerFormatting.swift in Sources */,
+				6D8D9EA927301B8500F90C3A /* FixedWidthIntegerExtendedFormatter.swift in Sources */,
+				6D8D9EA427301AFD00F90C3A /* FixedWidthIntegerFormatter.swift in Sources */,
+				6D8D9E90273015F000F90C3A /* LogDestination.swift in Sources */,
 				6D8D9E6B272F239400F90C3A /* InterpolatingObjectContainer.swift in Sources */,
 				6D8D9E43272F0B2100F90C3A /* LogBoolFormat.swift in Sources */,
 				6D8D9E80272F3B7400F90C3A /* RawPointerContainer.swift in Sources */,
 				6D8D9E3F272F0B2000F90C3A /* LogFloatFormatting.swift in Sources */,
+				6D8D9E8A272F616600F90C3A /* Logger.swift in Sources */,
 				6D8D9E66272F187400F90C3A /* LogMessageInterpolation.swift in Sources */,
+				6D8D9EB327301BF700F90C3A /* RawPointerFormatter.swift in Sources */,
+				6D8D9EBF27307FDF00F90C3A /* IP4AddressFormatter.swift in Sources */,
 				6D8D9E57272F0B2100F90C3A /* LogPointerFormat.swift in Sources */,
 				6D8D9E31272EFAF900F90C3A /* Logger.docc in Sources */,
+				6D8D9EC42730840B00F90C3A /* FixedWidthIntegerDateFormatter.swift in Sources */,
+				6D5B79372731B03A0035A5BE /* RawBufferPointerFormatter.swift in Sources */,
+				6D8D9EB92730411500F90C3A /* Formatter.swift in Sources */,
 				6D8D9E62272F187400F90C3A /* LogMessage.swift in Sources */,
+				6D8D9E9F27301AA000F90C3A /* AlignmentFormatter.swift in Sources */,
 				6D8D9E4F272F0B2100F90C3A /* LogStringAlignment.swift in Sources */,
+				6D8D9EC927308FDB00F90C3A /* DarwinErrnoFormatter.swift in Sources */,
+				6D8D9E952730195900F90C3A /* BinaryFloatingFormatter.swift in Sources */,
+				6D5B7932273179250035A5BE /* BytesFormatter.swift in Sources */,
 				6D8D9E70272F24BC00F90C3A /* InterpolatingObject.swift in Sources */,
+				6D8D9ECE2730B70700F90C3A /* DarwinSignalFormatter.swift in Sources */,
+				6D8D9ED32730B95500F90C3A /* DarwinModeFormatter.swift in Sources */,
+				6D8D9E86272F616600F90C3A /* LogLevel.swift in Sources */,
 				6D8D9E7B272F2BD100F90C3A /* AppendClosure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,19 +596,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D8D9E9B273019F800F90C3A /* BoolFormatter.swift in Sources */,
 				6D8D9E54272F0B2100F90C3A /* LogPrivacy.swift in Sources */,
 				6D8D9E4C272F0B2100F90C3A /* LogInt32ExtendedFormat.swift in Sources */,
+				6D8D9ED92730BDED00F90C3A /* FileAccessMask.swift in Sources */,
 				6D8D9E5C272F0B2100F90C3A /* LogIntegerFormatting.swift in Sources */,
+				6D8D9EAA27301B8500F90C3A /* FixedWidthIntegerExtendedFormatter.swift in Sources */,
+				6D8D9EA527301AFD00F90C3A /* FixedWidthIntegerFormatter.swift in Sources */,
+				6D8D9E91273015F000F90C3A /* LogDestination.swift in Sources */,
 				6D8D9E6C272F239400F90C3A /* InterpolatingObjectContainer.swift in Sources */,
 				6D8D9E44272F0B2100F90C3A /* LogBoolFormat.swift in Sources */,
 				6D8D9E81272F3B7400F90C3A /* RawPointerContainer.swift in Sources */,
 				6D8D9E40272F0B2000F90C3A /* LogFloatFormatting.swift in Sources */,
+				6D8D9E8B272F616600F90C3A /* Logger.swift in Sources */,
 				6D8D9E67272F187400F90C3A /* LogMessageInterpolation.swift in Sources */,
+				6D8D9EB427301BF700F90C3A /* RawPointerFormatter.swift in Sources */,
+				6D8D9EC027307FDF00F90C3A /* IP4AddressFormatter.swift in Sources */,
 				6D8D9E58272F0B2100F90C3A /* LogPointerFormat.swift in Sources */,
 				6D8D9E32272EFAF900F90C3A /* Logger.docc in Sources */,
+				6D8D9EC52730840B00F90C3A /* FixedWidthIntegerDateFormatter.swift in Sources */,
+				6D5B79382731B03A0035A5BE /* RawBufferPointerFormatter.swift in Sources */,
+				6D8D9EBA2730411500F90C3A /* Formatter.swift in Sources */,
 				6D8D9E63272F187400F90C3A /* LogMessage.swift in Sources */,
+				6D8D9EA027301AA000F90C3A /* AlignmentFormatter.swift in Sources */,
 				6D8D9E50272F0B2100F90C3A /* LogStringAlignment.swift in Sources */,
+				6D8D9ECA27308FDB00F90C3A /* DarwinErrnoFormatter.swift in Sources */,
+				6D8D9E962730195900F90C3A /* BinaryFloatingFormatter.swift in Sources */,
+				6D5B7933273179250035A5BE /* BytesFormatter.swift in Sources */,
 				6D8D9E71272F24BC00F90C3A /* InterpolatingObject.swift in Sources */,
+				6D8D9ECF2730B70700F90C3A /* DarwinSignalFormatter.swift in Sources */,
+				6D8D9ED42730B95500F90C3A /* DarwinModeFormatter.swift in Sources */,
+				6D8D9E87272F616600F90C3A /* LogLevel.swift in Sources */,
 				6D8D9E7C272F2BD100F90C3A /* AppendClosure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,19 +635,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D8D9E9C273019F800F90C3A /* BoolFormatter.swift in Sources */,
 				6D8D9E55272F0B2100F90C3A /* LogPrivacy.swift in Sources */,
 				6D8D9E4D272F0B2100F90C3A /* LogInt32ExtendedFormat.swift in Sources */,
+				6D8D9EDA2730BDED00F90C3A /* FileAccessMask.swift in Sources */,
 				6D8D9E5D272F0B2100F90C3A /* LogIntegerFormatting.swift in Sources */,
+				6D8D9EAB27301B8500F90C3A /* FixedWidthIntegerExtendedFormatter.swift in Sources */,
+				6D8D9EA627301AFD00F90C3A /* FixedWidthIntegerFormatter.swift in Sources */,
+				6D8D9E92273015F000F90C3A /* LogDestination.swift in Sources */,
 				6D8D9E6D272F239400F90C3A /* InterpolatingObjectContainer.swift in Sources */,
 				6D8D9E45272F0B2100F90C3A /* LogBoolFormat.swift in Sources */,
 				6D8D9E82272F3B7400F90C3A /* RawPointerContainer.swift in Sources */,
 				6D8D9E41272F0B2000F90C3A /* LogFloatFormatting.swift in Sources */,
+				6D8D9E8C272F616600F90C3A /* Logger.swift in Sources */,
 				6D8D9E68272F187400F90C3A /* LogMessageInterpolation.swift in Sources */,
+				6D8D9EB527301BF700F90C3A /* RawPointerFormatter.swift in Sources */,
+				6D8D9EC127307FDF00F90C3A /* IP4AddressFormatter.swift in Sources */,
 				6D8D9E59272F0B2100F90C3A /* LogPointerFormat.swift in Sources */,
 				6D8D9E33272EFAF900F90C3A /* Logger.docc in Sources */,
+				6D8D9EC62730840B00F90C3A /* FixedWidthIntegerDateFormatter.swift in Sources */,
+				6D5B79392731B03A0035A5BE /* RawBufferPointerFormatter.swift in Sources */,
+				6D8D9EBB2730411500F90C3A /* Formatter.swift in Sources */,
 				6D8D9E64272F187400F90C3A /* LogMessage.swift in Sources */,
+				6D8D9EA127301AA000F90C3A /* AlignmentFormatter.swift in Sources */,
 				6D8D9E51272F0B2100F90C3A /* LogStringAlignment.swift in Sources */,
+				6D8D9ECB27308FDB00F90C3A /* DarwinErrnoFormatter.swift in Sources */,
+				6D8D9E972730195900F90C3A /* BinaryFloatingFormatter.swift in Sources */,
+				6D5B7934273179250035A5BE /* BytesFormatter.swift in Sources */,
 				6D8D9E72272F24BC00F90C3A /* InterpolatingObject.swift in Sources */,
+				6D8D9ED02730B70700F90C3A /* DarwinSignalFormatter.swift in Sources */,
+				6D8D9ED52730B95500F90C3A /* DarwinModeFormatter.swift in Sources */,
+				6D8D9E88272F616600F90C3A /* LogLevel.swift in Sources */,
 				6D8D9E7D272F2BD100F90C3A /* AppendClosure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
