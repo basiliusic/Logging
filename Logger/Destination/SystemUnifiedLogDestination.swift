@@ -17,7 +17,7 @@ final class SystemUnifiedLogDestination: LogDestination {
   private(set) var subsystem: String
   private(set) var category: String
   
-  @available(iOS 14, *)
+  @available(iOS 14, macOS 11.0, tvOS 14, watchOS 7, *)
   lazy var systemLogger: os.Logger = {
     return .init(subsystem: subsystem, category: category)
   }()
@@ -28,7 +28,7 @@ final class SystemUnifiedLogDestination: LogDestination {
     self.subsystem = subsystem
     self.category = category
     
-    if #available(iOS 14, *) {
+    if #available(iOS 14, macOS 11.0, tvOS 14, watchOS 7, *) {
       systemLogger = .init(subsystem: subsystem, category: category)
     }
   }
@@ -36,7 +36,7 @@ final class SystemUnifiedLogDestination: LogDestination {
   // MARK: - Log
   
   func log(_ level: LogLevel, message: String) {
-    guard #available(iOS 14, *) else {
+    guard #available(iOS 14, macOS 11.0, tvOS 14, watchOS 7, *) else {
       return
     }
     

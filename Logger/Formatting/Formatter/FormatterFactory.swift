@@ -75,8 +75,6 @@ final class FormatterFactory {
       return makeFloatingFormatter(for: container)
     case let container as FloatingInterpolatingObject<Float64>:
       return makeFloatingFormatter(for: container)
-    case let container as FloatingInterpolatingObject<Float80>:
-      return makeFloatingFormatter(for: container)
     case let container as FloatingInterpolatingObject<Double>:
       return makeFloatingFormatter(for: container)
     case let container as FloatingInterpolatingObject<CGFloat>:
@@ -101,7 +99,7 @@ final class FormatterFactory {
       return makeNSObjectFormatter(for: container)
     default:
 #if os(iOS) || os(tvOS) || os(watchOS)
-      if #available(iOS 14, *),
+      if #available(iOS 14, tvOS 14, watchOS 7, *),
          let container = container as? FloatingInterpolatingObject<Float16>
       {
         return makeFloatingFormatter(for: container)
