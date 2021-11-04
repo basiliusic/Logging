@@ -5,6 +5,12 @@
 //  Created by basilic on 02.11.2021.
 //
 
+#if os(macOS)
+import AppKit
+#elseif os(iOS) || os(tvOS) || os(watchOS)
+import UIKit
+#endif
+
 class MessageFormatter {
   
   // MARK: - Properties

@@ -5,6 +5,8 @@
 //  Created by basilic on 31.10.2021.
 //
 
+import Foundation
+
 /// Holds all interpolated data
 struct InterpolatingObjectContainer<ObjectType, FormatType>: InterpolatingObject {
   
