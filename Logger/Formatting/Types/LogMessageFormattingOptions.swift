@@ -28,5 +28,6 @@ public struct LogMessageFormattingOptions: OptionSet {
   public static let category: Self = .init(rawValue: 1 << 2)
   public static let level: Self = .init(rawValue: 1 << 3)
   public static let attributes: Self = .init(rawValue: 1 << 4)
-  
+  /// Caller location (file, function, line)
+  public static let location: Self = .init(rawValue: 1 << 5)
 }

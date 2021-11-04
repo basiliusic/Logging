@@ -175,6 +175,18 @@
 		6D93D5FC27335D7A00B32551 /* LevelFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93D5FA27335D7A00B32551 /* LevelFormatter.swift */; };
 		6D93D5FD27335D7A00B32551 /* LevelFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93D5FA27335D7A00B32551 /* LevelFormatter.swift */; };
 		6D93D5FE27335D7A00B32551 /* LevelFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93D5FA27335D7A00B32551 /* LevelFormatter.swift */; };
+		6D93D6002733ECD300B32551 /* SystemUnifiedLogDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93D5FF2733ECD300B32551 /* SystemUnifiedLogDestination.swift */; };
+		6D93D6012733ECD300B32551 /* SystemUnifiedLogDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93D5FF2733ECD300B32551 /* SystemUnifiedLogDestination.swift */; };
+		6D93D6022733ECD300B32551 /* SystemUnifiedLogDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93D5FF2733ECD300B32551 /* SystemUnifiedLogDestination.swift */; };
+		6D93D6032733ECD300B32551 /* SystemUnifiedLogDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93D5FF2733ECD300B32551 /* SystemUnifiedLogDestination.swift */; };
+		6D93D6052733F0D300B32551 /* OldSystemUnifiedLogDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93D6042733F0D300B32551 /* OldSystemUnifiedLogDestination.swift */; };
+		6D93D6062733F0D300B32551 /* OldSystemUnifiedLogDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93D6042733F0D300B32551 /* OldSystemUnifiedLogDestination.swift */; };
+		6D93D6072733F0D300B32551 /* OldSystemUnifiedLogDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93D6042733F0D300B32551 /* OldSystemUnifiedLogDestination.swift */; };
+		6D93D6082733F0D300B32551 /* OldSystemUnifiedLogDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93D6042733F0D300B32551 /* OldSystemUnifiedLogDestination.swift */; };
+		6D93D60A273414FA00B32551 /* SysLogDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93D609273414FA00B32551 /* SysLogDestination.swift */; };
+		6D93D60B273414FA00B32551 /* SysLogDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93D609273414FA00B32551 /* SysLogDestination.swift */; };
+		6D93D60C273414FA00B32551 /* SysLogDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93D609273414FA00B32551 /* SysLogDestination.swift */; };
+		6D93D60D273414FA00B32551 /* SysLogDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93D609273414FA00B32551 /* SysLogDestination.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -224,6 +236,9 @@
 		6D93D5F02732C0C900B32551 /* NSObjectFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectFormatter.swift; sourceTree = "<group>"; };
 		6D93D5F527335B1100B32551 /* LogMessageFormattingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogMessageFormattingOptions.swift; sourceTree = "<group>"; };
 		6D93D5FA27335D7A00B32551 /* LevelFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelFormatter.swift; sourceTree = "<group>"; };
+		6D93D5FF2733ECD300B32551 /* SystemUnifiedLogDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemUnifiedLogDestination.swift; sourceTree = "<group>"; };
+		6D93D6042733F0D300B32551 /* OldSystemUnifiedLogDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldSystemUnifiedLogDestination.swift; sourceTree = "<group>"; };
+		6D93D609273414FA00B32551 /* SysLogDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SysLogDestination.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,6 +356,9 @@
 			isa = PBXGroup;
 			children = (
 				6D8D9E8E273015F000F90C3A /* LogDestination.swift */,
+				6D93D5FF2733ECD300B32551 /* SystemUnifiedLogDestination.swift */,
+				6D93D6042733F0D300B32551 /* OldSystemUnifiedLogDestination.swift */,
+				6D93D609273414FA00B32551 /* SysLogDestination.swift */,
 			);
 			path = Destination;
 			sourceTree = "<group>";
@@ -573,6 +591,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D5B794A27320A030035A5BE /* EmptyFormatter.swift in Sources */,
+				6D93D6052733F0D300B32551 /* OldSystemUnifiedLogDestination.swift in Sources */,
 				6D8D9E99273019F800F90C3A /* BoolFormatter.swift in Sources */,
 				6D93D5F12732C0C900B32551 /* NSObjectFormatter.swift in Sources */,
 				6D93D5EC2732C09B00B32551 /* CustomStringConvertableFormatter.swift in Sources */,
@@ -580,6 +599,7 @@
 				6D8D9E4A272F0B2100F90C3A /* LogInt32ExtendedFormat.swift in Sources */,
 				6D93D5FB27335D7A00B32551 /* LevelFormatter.swift in Sources */,
 				6D8D9ED72730BDED00F90C3A /* FileAccessMask.swift in Sources */,
+				6D93D6002733ECD300B32551 /* SystemUnifiedLogDestination.swift in Sources */,
 				6D8D9E5A272F0B2100F90C3A /* LogIntegerFormatting.swift in Sources */,
 				6D8D9EA827301B8500F90C3A /* FixedWidthIntegerExtendedFormatter.swift in Sources */,
 				6D8D9EA327301AFD00F90C3A /* FixedWidthIntegerFormatter.swift in Sources */,
@@ -607,6 +627,7 @@
 				6D8D9EC827308FDB00F90C3A /* DarwinErrnoFormatter.swift in Sources */,
 				6D8D9E942730195900F90C3A /* BinaryFloatingFormatter.swift in Sources */,
 				6D5B7931273179250035A5BE /* BytesFormatter.swift in Sources */,
+				6D93D60A273414FA00B32551 /* SysLogDestination.swift in Sources */,
 				6D8D9E6F272F24BC00F90C3A /* InterpolatingObject.swift in Sources */,
 				6D8D9ECD2730B70700F90C3A /* DarwinSignalFormatter.swift in Sources */,
 				6D8D9ED22730B95500F90C3A /* DarwinModeFormatter.swift in Sources */,
@@ -621,6 +642,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D5B794B27320A030035A5BE /* EmptyFormatter.swift in Sources */,
+				6D93D6062733F0D300B32551 /* OldSystemUnifiedLogDestination.swift in Sources */,
 				6D8D9E9A273019F800F90C3A /* BoolFormatter.swift in Sources */,
 				6D93D5F22732C0C900B32551 /* NSObjectFormatter.swift in Sources */,
 				6D93D5ED2732C09B00B32551 /* CustomStringConvertableFormatter.swift in Sources */,
@@ -628,6 +650,7 @@
 				6D8D9E4B272F0B2100F90C3A /* LogInt32ExtendedFormat.swift in Sources */,
 				6D93D5FC27335D7A00B32551 /* LevelFormatter.swift in Sources */,
 				6D8D9ED82730BDED00F90C3A /* FileAccessMask.swift in Sources */,
+				6D93D6012733ECD300B32551 /* SystemUnifiedLogDestination.swift in Sources */,
 				6D8D9E5B272F0B2100F90C3A /* LogIntegerFormatting.swift in Sources */,
 				6D8D9EA927301B8500F90C3A /* FixedWidthIntegerExtendedFormatter.swift in Sources */,
 				6D8D9EA427301AFD00F90C3A /* FixedWidthIntegerFormatter.swift in Sources */,
@@ -655,6 +678,7 @@
 				6D8D9EC927308FDB00F90C3A /* DarwinErrnoFormatter.swift in Sources */,
 				6D8D9E952730195900F90C3A /* BinaryFloatingFormatter.swift in Sources */,
 				6D5B7932273179250035A5BE /* BytesFormatter.swift in Sources */,
+				6D93D60B273414FA00B32551 /* SysLogDestination.swift in Sources */,
 				6D8D9E70272F24BC00F90C3A /* InterpolatingObject.swift in Sources */,
 				6D8D9ECE2730B70700F90C3A /* DarwinSignalFormatter.swift in Sources */,
 				6D8D9ED32730B95500F90C3A /* DarwinModeFormatter.swift in Sources */,
@@ -669,6 +693,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D5B794C27320A030035A5BE /* EmptyFormatter.swift in Sources */,
+				6D93D6072733F0D300B32551 /* OldSystemUnifiedLogDestination.swift in Sources */,
 				6D8D9E9B273019F800F90C3A /* BoolFormatter.swift in Sources */,
 				6D93D5F32732C0C900B32551 /* NSObjectFormatter.swift in Sources */,
 				6D93D5EE2732C09B00B32551 /* CustomStringConvertableFormatter.swift in Sources */,
@@ -676,6 +701,7 @@
 				6D8D9E4C272F0B2100F90C3A /* LogInt32ExtendedFormat.swift in Sources */,
 				6D93D5FD27335D7A00B32551 /* LevelFormatter.swift in Sources */,
 				6D8D9ED92730BDED00F90C3A /* FileAccessMask.swift in Sources */,
+				6D93D6022733ECD300B32551 /* SystemUnifiedLogDestination.swift in Sources */,
 				6D8D9E5C272F0B2100F90C3A /* LogIntegerFormatting.swift in Sources */,
 				6D8D9EAA27301B8500F90C3A /* FixedWidthIntegerExtendedFormatter.swift in Sources */,
 				6D8D9EA527301AFD00F90C3A /* FixedWidthIntegerFormatter.swift in Sources */,
@@ -703,6 +729,7 @@
 				6D8D9ECA27308FDB00F90C3A /* DarwinErrnoFormatter.swift in Sources */,
 				6D8D9E962730195900F90C3A /* BinaryFloatingFormatter.swift in Sources */,
 				6D5B7933273179250035A5BE /* BytesFormatter.swift in Sources */,
+				6D93D60C273414FA00B32551 /* SysLogDestination.swift in Sources */,
 				6D8D9E71272F24BC00F90C3A /* InterpolatingObject.swift in Sources */,
 				6D8D9ECF2730B70700F90C3A /* DarwinSignalFormatter.swift in Sources */,
 				6D8D9ED42730B95500F90C3A /* DarwinModeFormatter.swift in Sources */,
@@ -717,6 +744,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D5B794D27320A030035A5BE /* EmptyFormatter.swift in Sources */,
+				6D93D6082733F0D300B32551 /* OldSystemUnifiedLogDestination.swift in Sources */,
 				6D8D9E9C273019F800F90C3A /* BoolFormatter.swift in Sources */,
 				6D93D5F42732C0C900B32551 /* NSObjectFormatter.swift in Sources */,
 				6D93D5EF2732C09B00B32551 /* CustomStringConvertableFormatter.swift in Sources */,
@@ -724,6 +752,7 @@
 				6D8D9E4D272F0B2100F90C3A /* LogInt32ExtendedFormat.swift in Sources */,
 				6D93D5FE27335D7A00B32551 /* LevelFormatter.swift in Sources */,
 				6D8D9EDA2730BDED00F90C3A /* FileAccessMask.swift in Sources */,
+				6D93D6032733ECD300B32551 /* SystemUnifiedLogDestination.swift in Sources */,
 				6D8D9E5D272F0B2100F90C3A /* LogIntegerFormatting.swift in Sources */,
 				6D8D9EAB27301B8500F90C3A /* FixedWidthIntegerExtendedFormatter.swift in Sources */,
 				6D8D9EA627301AFD00F90C3A /* FixedWidthIntegerFormatter.swift in Sources */,
@@ -751,6 +780,7 @@
 				6D8D9ECB27308FDB00F90C3A /* DarwinErrnoFormatter.swift in Sources */,
 				6D8D9E972730195900F90C3A /* BinaryFloatingFormatter.swift in Sources */,
 				6D5B7934273179250035A5BE /* BytesFormatter.swift in Sources */,
+				6D93D60D273414FA00B32551 /* SysLogDestination.swift in Sources */,
 				6D8D9E72272F24BC00F90C3A /* InterpolatingObject.swift in Sources */,
 				6D8D9ED02730B70700F90C3A /* DarwinSignalFormatter.swift in Sources */,
 				6D8D9ED52730B95500F90C3A /* DarwinModeFormatter.swift in Sources */,
@@ -767,7 +797,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.basiliusic.logger;
 				PRODUCT_NAME = Logger;
@@ -778,7 +808,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.basiliusic.logger;
 				PRODUCT_NAME = Logger;
@@ -1009,7 +1039,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(inherited)";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1089,7 +1119,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(inherited)";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

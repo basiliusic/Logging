@@ -71,10 +71,6 @@ final class FormatterFactory {
       // Floating
     case let container as FloatingInterpolatingObject<Float>:
       return makeFloatingFormatter(for: container)
-#if os(iOS) || os(tvOS) || os(watchOS)
-    case let container as FloatingInterpolatingObject<Float16>:
-      return makeFloatingFormatter(for: container)
-#endif
     case let container as FloatingInterpolatingObject<Float32>:
       return makeFloatingFormatter(for: container)
     case let container as FloatingInterpolatingObject<Float64>:
@@ -104,6 +100,14 @@ final class FormatterFactory {
     case let container as NSObjectInterpolatingObject:
       return makeNSObjectFormatter(for: container)
     default:
+#if os(iOS) || os(tvOS) || os(watchOS)
+      if #available(iOS 14, *),
+         let container = container as? FloatingInterpolatingObject<Float16>
+      {
+        return makeFloatingFormatter(for: container)
+      }
+#endif
+      
       assertionFailure("Unknown object type: \(type(of: container))")
       
       return EmptyFormatter(string: "")
