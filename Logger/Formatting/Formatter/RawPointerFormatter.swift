@@ -10,6 +10,7 @@ struct RawPointerFormatter: Formatter {
   // MARK: - Properties
   
   var pointer: UnsafeRawPointer
+  var bytes: Int
   var format: LogPointerFormat
   
   // MARK: - Formatter

@@ -17,6 +17,8 @@ public struct LogMessage: ExpressibleByStringInterpolation {
 
   // MARK: - Properties
   
+  var timestamp: Date = .init()
+  
   var interpolation: LogMessageInterpolation
 
   // MARK: - Life cycle

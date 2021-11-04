@@ -15,7 +15,7 @@ public struct LogMessageInterpolation: StringInterpolationProtocol {
   
   // MARK: - Properties
   
-  var data: [InterpolatingObject] = []
+  private(set) var data: [InterpolatingObject] = []
   
   // MARK: - Life cycle
   
@@ -28,7 +28,7 @@ public struct LogMessageInterpolation: StringInterpolationProtocol {
   init(stringLiteral: String) {
     data.append(
       StringInterpolatingObject(
-        string: stringLiteral,
+        objectClosure: { stringLiteral },
         format: nil,
         align: .none,
         privacy: .auto,
@@ -46,7 +46,7 @@ public struct LogMessageInterpolation: StringInterpolationProtocol {
   public mutating func appendLiteral(_ literal: String) {
     data.append(
       StringInterpolatingObject(
-        string: literal,
+        objectClosure: { literal },
         format: nil,
         align: .none,
         privacy: .auto,
@@ -166,7 +166,7 @@ public struct LogMessageInterpolation: StringInterpolationProtocol {
     attributes: String = ""
   ) where T: BinaryFloatingPoint {
     data.append(
-      FloatingInterpolatingOpject(
+      FloatingInterpolatingObject(
         objectClosure: number,
         format: format,
         align: align,
@@ -264,8 +264,8 @@ public struct LogMessageInterpolation: StringInterpolationProtocol {
     attributes: String = ""
   ) {
     let container = RawPointerClosureContainer(
-      pointer: pointer,
-      bytes: bytes
+      pointer: pointer(),
+      bytes: bytes()
     )
     
     data.append(
