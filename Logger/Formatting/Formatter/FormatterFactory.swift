@@ -5,7 +5,11 @@
 //  Created by basilic on 03.11.2021.
 //
 
+#if os(macOS)
+import AppKit
+#else
 import UIKit
+#endif
 
 final class FormatterFactory {
     
@@ -67,8 +71,10 @@ final class FormatterFactory {
       // Floating
     case let container as FloatingInterpolatingObject<Float>:
       return makeFloatingFormatter(for: container)
+#if os(iOS)
     case let container as FloatingInterpolatingObject<Float16>:
       return makeFloatingFormatter(for: container)
+#endif
     case let container as FloatingInterpolatingObject<Float32>:
       return makeFloatingFormatter(for: container)
     case let container as FloatingInterpolatingObject<Float64>:

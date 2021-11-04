@@ -6,7 +6,12 @@
 //
 
 import Foundation
+
+#if os(macOS)
+import AppKit
+#else
 import UIKit
+#endif
 
 /// An object for writing interpolated string messages to the unified logging system.
 public final class Logger {
