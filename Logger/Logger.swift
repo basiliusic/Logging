@@ -6,20 +6,41 @@
 //
 
 import Foundation
+import UIKit
 
 /// An object for writing interpolated string messages to the unified logging system.
 public final class Logger {
       
   // MARK: - Properties
   
+  static var privacyIsAlwaysPublic: Bool {
+    get { FormatterFactory.privacyIsAlwaysPublic }
+    set { FormatterFactory.privacyIsAlwaysPublic = newValue }
+  }
+  
+  static var timestampFormatter: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "HH-mm-ss dd-MM-yyyy"
+    
+    return formatter
+  }()
+  
+  public static var destinations: [LogDestination.Type] = []
+  
   var subsystem: String
   var category: String
+  
+  var destinations: [LogDestination]
   
   // MARK: - Life cycle
   
   init(subsystem: String, category: String) {
     self.subsystem = subsystem
     self.category = category
+    
+    self.destinations = Self.destinations.compactMap {
+      $0.init(subsystem: subsystem, category: category)
+    }
   }
   
   // MARK: - Log
@@ -31,7 +52,23 @@ public final class Logger {
     function: String = #function,
     line: Int = #line
   ) {
-    
+    let formatter = MessageFormatter(
+      formatterFactory: FormatterFactory(),
+      timestampFormatter: Self.timestampFormatter,
+      subsystem: subsystem,
+      category: category,
+      message: message,
+      level: level
+    )
+            
+    destinations.forEach { destination in
+      let options = type(of: destination).formattingOptions
+      
+      destination.log(
+        level,
+        message: formatter.formatted(by: options)
+      )
+    }
   }
   
   /// Writes a message to the log using the defualt log type.

@@ -9,14 +9,15 @@ struct AlignmentFormatter: Formatter {
   
   // MARK: - Properties
   
-  var string: String
-  var format: LogStringAlignment
+  var formatter: Formatter
+  var align: LogStringAlignment
   
   // MARK: - Formatter
   
   var formatted: String {
-    let alignment = format.alignment
-    let columns = format.columns()
+    let alignment = align.alignment
+    let columns = align.columns()
+    let string = formatter.formatted
     
     let stringSize = string.count
     var formatted = string

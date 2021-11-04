@@ -8,7 +8,7 @@
 /// Stores `UnsafeRawPointer` data to extract it
 struct RawPointerClosureContainer {
   
-  var pointer: AppendClosure<UnsafeRawPointer>
-  var bytes: AppendClosure<Int>
+  var pointer: UnsafeRawPointer
+  var bytes: Int
   
 }
