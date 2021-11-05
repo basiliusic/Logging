@@ -8,11 +8,11 @@
 import OSLog
 import os
 
-final class SystemUnifiedLogDestination: LogDestination {
+public final class SystemUnifiedLogDestination: LogDestination {
           
   // MARK: - Properties
   
-  static var formattingOptions: LogMessageFormattingOptions = []
+  public static var formattingOptions: LogMessageFormattingOptions = []
   
   private(set) var subsystem: String
   private(set) var category: String
@@ -24,7 +24,7 @@ final class SystemUnifiedLogDestination: LogDestination {
   
   // MARK: - Life cyclle
   
-  required init(subsystem: String, category: String) {
+  public required init(subsystem: String, category: String) {
     self.subsystem = subsystem
     self.category = category
     
@@ -35,7 +35,7 @@ final class SystemUnifiedLogDestination: LogDestination {
   
   // MARK: - Log
   
-  func log(_ level: LogLevel, message: String) {
+  public func log(_ level: LogLevel, message: String) {
     guard #available(iOS 14, macOS 11.0, tvOS 14, watchOS 7, *) else {
       return
     }

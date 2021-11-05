@@ -8,18 +8,23 @@
 import Foundation
 
 /// Holds all interpolated data
+@usableFromInline
 struct InterpolatingObjectContainer<ObjectType, FormatType>: InterpolatingObject {
   
   // MARK: - Properties
   
   var object: ObjectType
   var format: FormatType
+  @usableFromInline
   var align: LogStringAlignment
+  @usableFromInline
   var privacy: LogPrivacy
-  var attributes: String
+  @usableFromInline
+  var attributes: String 
   
   // MARK: - Life cycle
   
+  @usableFromInline
   init(
     objectClosure: @escaping AppendClosure<ObjectType>,
     format: FormatType,
@@ -38,13 +43,23 @@ struct InterpolatingObjectContainer<ObjectType, FormatType>: InterpolatingObject
 
 // MARK: - Types
 
+@usableFromInline
 typealias StringInterpolatingObject = InterpolatingObjectContainer<String, Any?>
+@usableFromInline
 typealias IntegerInterpolatingObject<T: FixedWidthInteger> = InterpolatingObjectContainer<T, LogIntegerFormatting>
+@usableFromInline
 typealias ExtendedIntegerInterpolatingObject<T: FixedWidthInteger> = InterpolatingObjectContainer<T, LogInt32ExtendedFormat>
+@usableFromInline
 typealias FloatingInterpolatingObject<T: BinaryFloatingPoint> = InterpolatingObjectContainer<T, LogFloatFormatting>
+@usableFromInline
 typealias BoolInterpolatingObject = InterpolatingObjectContainer<Bool, LogBoolFormat>
+@usableFromInline
 typealias CustomStringConvertableInterpolatingObject = InterpolatingObjectContainer<CustomStringConvertible, Any?>
+@usableFromInline
 typealias TypeInterpolatingObject = InterpolatingObjectContainer<Any.Type, Any?>
+@usableFromInline
 typealias RawPointerInterpolatingObject = InterpolatingObjectContainer<RawPointerClosureContainer, LogPointerFormat>
+@usableFromInline
 typealias RawBufferPointerInterpolatingObject = InterpolatingObjectContainer<UnsafeRawBufferPointer, LogPointerFormat>
+@usableFromInline
 typealias NSObjectInterpolatingObject = InterpolatingObjectContainer<NSObject, Any?>

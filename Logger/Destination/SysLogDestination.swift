@@ -6,7 +6,6 @@
 //
 
 import Darwin
-import asl
 
 final class SysLogDestination: LogDestination {
         
