@@ -19,7 +19,7 @@ class Signposter {
     return signpost
   }
   
-  var isEnabled: Bool = true
+  public private(set) var isEnabled: Bool = true
   var logType: SignpostLoggingType
   
   @available(iOS 15, macOS 12, tvOS 15, watchOS 8, *)
@@ -67,6 +67,10 @@ class Signposter {
         system: signposter.makeSignpostID()
       )
     }
+
+    guard isEnabled else {
+      return .null
+    }
     
     // Skip memory addresses
     return SignpostID(
@@ -82,6 +86,10 @@ class Signposter {
       return .init(
         system: signposter.makeSignpostID(from: object)
       )
+    }
+    
+    guard isEnabled else {
+      return .null
     }
     
     var log: OSLog = .init(subsystem: "", category: .pointsOfInterest)
@@ -121,6 +129,11 @@ class Signposter {
       )
     }
     
+    guard isEnabled else {
+      fatalError()
+    }
+    
+    
     fatalError()
   }
   
@@ -150,6 +163,10 @@ class Signposter {
       )
     }
     
+    guard isEnabled else {
+      fatalError()
+    }
+    
     fatalError()
   }
   
@@ -167,6 +184,10 @@ class Signposter {
         system: systemState,
         id: id
       )
+    }
+    
+    guard isEnabled else {
+      fatalError()
     }
     
     fatalError()
@@ -198,6 +219,10 @@ class Signposter {
       )
     }
     
+    guard isEnabled else {
+      fatalError()
+    }
+    
     fatalError()
   }
   
@@ -212,6 +237,10 @@ class Signposter {
         name,
         state.systemState
       )
+    }
+    
+    guard isEnabled else {
+      return
     }
     
     fatalError()
@@ -238,6 +267,10 @@ class Signposter {
       )
     }
     
+    guard isEnabled else {
+      return
+    }
+    
     fatalError()
   }
   
@@ -256,6 +289,10 @@ class Signposter {
       )
     }
     
+    guard isEnabled else {
+      return try task()
+    }
+
     fatalError()
   }
   
@@ -282,6 +319,10 @@ class Signposter {
       )
     }
     
+    guard isEnabled else {
+      return try task()
+    }
+    
     fatalError()
   }
   
@@ -298,6 +339,10 @@ class Signposter {
       )
     }
     
+    guard isEnabled else {
+      return
+    }
+    
     fatalError()
   }
   
@@ -311,6 +356,10 @@ class Signposter {
       message: message,
       level: .info
     )
+    
+    guard isEnabled else {
+      return
+    }
     
     let formatted = formatter.formatted(by: [])
     
