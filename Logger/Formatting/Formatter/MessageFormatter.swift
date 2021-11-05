@@ -34,14 +34,14 @@ class MessageFormatter {
   // MARK: - Life cycle
   
   init(formatterFactory: FormatterFactory,
-       timestampFormatter: DateFormatter,
-       subsystem: String,
-       category: String,
+       timestampFormatter: DateFormatter = .init(),
+       subsystem: String = "",
+       category: String = "",
        message: LogMessage,
        level: LogLevel,
-       file: String,
-       function: String,
-       line: Int
+       file: String = "",
+       function: String = "",
+       line: Int = 0
   ) {
     self.factory = formatterFactory
     self.timestampFormatter = timestampFormatter

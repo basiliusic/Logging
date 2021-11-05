@@ -13,7 +13,7 @@ public class Log {
   // MARK: - Properties
   
   static var isValid: Bool {
-    if #available(iOS 14, *) {
+    if #available(iOS 12, macOS 10.14, tvOS 12, watchOS 5, *) {
       return true
     }
     
@@ -21,7 +21,7 @@ public class Log {
   }
   
   public static let `default`: Log = {
-    if #available(iOS 14, *) {
+    if #available(iOS 12, macOS 10.14, tvOS 12, watchOS 5, *) {
       return Log(systemLog: .default)
     }
     
@@ -29,7 +29,7 @@ public class Log {
   }()
   
   public static let disabled: Log = {
-    if #available(iOS 14, *) {
+    if #available(iOS 12, macOS 10.14, tvOS 12, watchOS 5, *) {
       return Log(systemLog: .disabled)
     }
     
@@ -39,7 +39,7 @@ public class Log {
     return log
   }()
   
-  @available(iOS 14, *)
+  @available(iOS 12, macOS 10.14, tvOS 12, watchOS 5, *)
   lazy var systemLog: OSLog = {
     return OSLog(subsystem: subsystem, category: category)
   }()
@@ -61,7 +61,7 @@ public class Log {
     self.category = category.rawValue
   }
   
-  @available(iOS 14, *)
+  @available(iOS 12, macOS 10.14, tvOS 12, watchOS 5, *)
   init(systemLog: OSLog) {
     self.subsystem = ""
     self.category = ""
@@ -94,7 +94,7 @@ extension Log {
     // MARK: Factory
     
     public static let pointsOfInterest: Self = {
-      if #available(iOS 14, *) {
+      if #available(iOS 12, macOS 10.14, tvOS 12, watchOS 5, *) {
         return Self(
           rawValue:
             OSLog.Category.pointsOfInterest.rawValue
@@ -105,7 +105,7 @@ extension Log {
     }()
     
     public static let dynamicStackTracing: Self = {
-      if #available(iOS 14, *) {
+      if #available(iOS 13, macOS 10.15, tvOS 13, watchOS 6, *) {
         return Self(
           rawValue:
             OSLog.Category.dynamicStackTracing.rawValue
@@ -116,7 +116,7 @@ extension Log {
     }()
     
     public static let dynamicTracing: Self = {
-      if #available(iOS 14, *) {
+      if #available(iOS 13, macOS 10.15, tvOS 13, watchOS 6, *) {
         return Self(
           rawValue:
             OSLog.Category.dynamicTracing.rawValue
