@@ -7,7 +7,7 @@
 
 import OSLog
 
-public final class OldSystemUnifiedLogDestination: LogDestination {
+final class OldSystemUnifiedLogDestination: LogDestination {
   
   // MARK: - Properties
   
