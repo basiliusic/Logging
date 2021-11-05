@@ -25,7 +25,7 @@ public final class Logger {
   
   public static var timestampFormatter: DateFormatter = {
     let formatter = DateFormatter()
-    formatter.dateFormat = "HH-mm-ss dd-MM-yyyy"
+    formatter.dateFormat = "y-MM-dd H:m:ss.SSSS"
     
     return formatter
   }()
