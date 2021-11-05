@@ -18,14 +18,14 @@ public final class Logger {
       
   // MARK: - Properties
   
-  static var privacyIsAlwaysPublic: Bool {
+  public static var privacyIsAlwaysPublic: Bool {
     get { FormatterFactory.privacyIsAlwaysPublic }
     set { FormatterFactory.privacyIsAlwaysPublic = newValue }
   }
   
-  static var timestampFormatter: DateFormatter = {
+  public static var timestampFormatter: DateFormatter = {
     let formatter = DateFormatter()
-    formatter.dateFormat = "HH-mm-ss dd-MM-yyyy"
+    formatter.dateFormat = "y-MM-dd H:m:ss.SSSS"
     
     return formatter
   }()
@@ -39,7 +39,7 @@ public final class Logger {
   
   // MARK: - Life cycle
   
-  init(subsystem: String, category: String) {
+  public init(subsystem: String, category: String) {
     self.subsystem = subsystem
     self.category = category
     
@@ -50,10 +50,10 @@ public final class Logger {
   
   // MARK: - Log
   
-  func log(
+  public func log(
     level: LogLevel,
     _ message: LogMessage,
-    file: String = #file,
+    file: String = #filePath,
     function: String = #function,
     line: Int = #line
   ) {
@@ -63,7 +63,10 @@ public final class Logger {
       subsystem: subsystem,
       category: category,
       message: message,
-      level: level
+      level: level,
+      file: file,
+      function: function,
+      line: line
     )
             
     destinations.forEach { destination in
@@ -78,9 +81,9 @@ public final class Logger {
   
   /// Writes a message to the log using the defualt log type.
   /// - Parameter message: The interpolated string that the logger writes to the log.
-  func notice(
+  public func notice(
     _ message: LogMessage,
-    file: String = #file,
+    file: String = #filePath,
     function: String = #function,
     line: Int = #line
   ) {
@@ -95,9 +98,9 @@ public final class Logger {
   
   /// Writes a debug message to the log.
   /// - Parameter message: The interpolated string that the logger writes to the log.
-  func debug(
+  public func debug(
     _ message: LogMessage,
-    file: String = #file,
+    file: String = #filePath,
     function: String = #function,
     line: Int = #line
   ) {
@@ -112,9 +115,9 @@ public final class Logger {
   
   /// Writes a trace message to the log.
   /// - Parameter message: The interpolated string that the logger writes to the log.
-  func trace(
+  public func trace(
     _ message: LogMessage,
-    file: String = #file,
+    file: String = #filePath,
     function: String = #function,
     line: Int = #line
   ) {
@@ -129,9 +132,9 @@ public final class Logger {
   
   /// Writes an informative message to the log.
   /// - Parameter message: The interpolated string that the logger writes to the log.
-  func info(
+  public func info(
     _ message: LogMessage,
-    file: String = #file,
+    file: String = #filePath,
     function: String = #function,
     line: Int = #line
   ) {
@@ -146,9 +149,9 @@ public final class Logger {
   
   /// Writes information about an error to the log
   /// - Parameter message: The interpolated string that the logger writes to the log.
-  func error(
+  public func error(
     _ message: LogMessage,
-    file: String = #file,
+    file: String = #filePath,
     function: String = #function,
     line: Int = #line
   ) {
@@ -163,9 +166,9 @@ public final class Logger {
   
   /// Writes information about a warning to the log.
   /// - Parameter message: The interpolated string that the logger writes to the log.
-  func warning(
+  public func warning(
     _ message: LogMessage,
-    file: String = #file,
+    file: String = #filePath,
     function: String = #function,
     line: Int = #line
   ) {
@@ -180,9 +183,9 @@ public final class Logger {
   
   /// Writes a message to the log about a bug that occurs when your app executes.
   /// - Parameter message: The interpolated string that the logger writes to the log.
-  func fault(
+  public func fault(
     _ message: LogMessage,
-    file: String = #file,
+    file: String = #filePath,
     function: String = #function,
     line: Int = #line
   ) {
@@ -197,9 +200,9 @@ public final class Logger {
   
   /// Writes a message to the log about a critical event in your app’s execution.
   /// - Parameter message: The interpolated string that the logger writes to the log.
-  func critical(
+  public func critical(
     _ message: LogMessage,
-    file: String = #file,
+    file: String = #filePath,
     function: String = #function,
     line: Int = #line
   ) {

@@ -7,12 +7,12 @@
 
 import OSLog
 
-final class OldSystemUnifiedLogDestination: LogDestination {
+public final class OldSystemUnifiedLogDestination: LogDestination {
   
   // MARK: - Properties
   
-  static var formattingOptions: LogMessageFormattingOptions = [.subsystem, .category]
-  static var iOS14LogEnabled: Bool = false
+  public static var formattingOptions: LogMessageFormattingOptions = [.subsystem, .category]
+  public static var iOS14LogEnabled: Bool = false
   
   var subsystem: String
   var category: String
@@ -24,14 +24,14 @@ final class OldSystemUnifiedLogDestination: LogDestination {
   
   // MARK: - Life cycle
   
-  required init(subsystem: String, category: String) {
+  public required init(subsystem: String, category: String) {
     self.subsystem = subsystem
     self.category = category
   }
   
   // MARK: - Log
   
-  func log(_ level: LogLevel, message: String) {
+  public func log(_ level: LogLevel, message: String) {
     let systemLevel = self.systemLevel(from: level)
     
     if #available(iOS 14, *) {
