@@ -30,8 +30,8 @@ public struct LogLevel: RawRepresentable, Equatable {
   public static let info: Self = .init(rawValue: 4)
   public static let error: Self = .init(rawValue: 3)
   static let warning: Self = .init(rawValue: 2)
-  static let fault: Self = .init(rawValue: 1)
-  public static let critical: Self = .init(rawValue: 0)
+  public static let fault: Self = .init(rawValue: 1)
+  static let critical: Self = .init(rawValue: 0)
   
   public static var `default`: Self {
     .info

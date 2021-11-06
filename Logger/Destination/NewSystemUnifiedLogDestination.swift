@@ -1,5 +1,5 @@
 //
-//  SystemUnifiedLogDestination.swift
+//  NewSystemUnifiedLogDestination.swift
 //  Logger
 //
 //  Created by basilic on 04.11.2021.
@@ -8,7 +8,7 @@
 import OSLog
 import os
 
-public final class SystemUnifiedLogDestination: LogDestination {
+final class NewSystemUnifiedLogDestination: LogDestination {
           
   // MARK: - Properties
   

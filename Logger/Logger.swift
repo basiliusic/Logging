@@ -30,11 +30,17 @@ public final class Logger {
     return formatter
   }()
   
+  public static var isSystemDestiantionEnabled: Bool = true
+  static let _systemDestination = MultiplexSystemLogDestination.self
+  public static var systemDestination: LogDestination.Type {
+    return _systemDestination
+  }
   public static var destinations: [LogDestination.Type] = []
   
   var subsystem: String
   var category: String
   
+  var systemDestination: MultiplexSystemLogDestination
   var destinations: [LogDestination]
   
   // MARK: - Life cycle
@@ -46,6 +52,7 @@ public final class Logger {
     self.destinations = Self.destinations.compactMap {
       $0.init(subsystem: subsystem, category: category)
     }
+    self.systemDestination = Self._systemDestination.init(subsystem: subsystem, category: category)
   }
   
   // MARK: - Log
@@ -68,6 +75,13 @@ public final class Logger {
       function: function,
       line: line
     )
+    
+    if Self.isSystemDestiantionEnabled {
+      systemDestination.log(
+        level,
+        message: formatter.formatted(by: type(of: systemDestination).formattingOptions)
+      )
+    }
             
     destinations.forEach { destination in
       let options = type(of: destination).formattingOptions

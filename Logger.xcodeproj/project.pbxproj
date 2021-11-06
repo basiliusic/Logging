@@ -49,9 +49,14 @@
 		6D93D5F12732C0C900B32551 /* NSObjectFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93D5F02732C0C900B32551 /* NSObjectFormatter.swift */; };
 		6D93D5F627335B1100B32551 /* LogMessageFormattingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93D5F527335B1100B32551 /* LogMessageFormattingOptions.swift */; };
 		6D93D5FB27335D7A00B32551 /* LevelFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93D5FA27335D7A00B32551 /* LevelFormatter.swift */; };
-		6D93D6002733ECD300B32551 /* SystemUnifiedLogDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93D5FF2733ECD300B32551 /* SystemUnifiedLogDestination.swift */; };
+		6D93D6002733ECD300B32551 /* NewSystemUnifiedLogDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93D5FF2733ECD300B32551 /* NewSystemUnifiedLogDestination.swift */; };
 		6D93D6052733F0D300B32551 /* OldSystemUnifiedLogDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93D6042733F0D300B32551 /* OldSystemUnifiedLogDestination.swift */; };
-		6D93D60A273414FA00B32551 /* SysLogDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93D609273414FA00B32551 /* SysLogDestination.swift */; };
+		6D93D66827352C5200B32551 /* Signposter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93D66727352C5200B32551 /* Signposter.swift */; };
+		6D93D66A27352DF600B32551 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93D66927352DF600B32551 /* Log.swift */; };
+		6D93D66C27353B9500B32551 /* SignpostLoggingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93D66B27353B9500B32551 /* SignpostLoggingType.swift */; };
+		6D93D66E27353CFA00B32551 /* MultiplexSystemLogDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93D66D27353CFA00B32551 /* MultiplexSystemLogDestination.swift */; };
+		6D93D67027354C8A00B32551 /* SignpostID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93D66F27354C8A00B32551 /* SignpostID.swift */; };
+		6D93D67427354D8900B32551 /* SignpostIntervalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93D67327354D8900B32551 /* SignpostIntervalState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,9 +103,14 @@
 		6D93D5F02732C0C900B32551 /* NSObjectFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectFormatter.swift; sourceTree = "<group>"; };
 		6D93D5F527335B1100B32551 /* LogMessageFormattingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogMessageFormattingOptions.swift; sourceTree = "<group>"; };
 		6D93D5FA27335D7A00B32551 /* LevelFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelFormatter.swift; sourceTree = "<group>"; };
-		6D93D5FF2733ECD300B32551 /* SystemUnifiedLogDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemUnifiedLogDestination.swift; sourceTree = "<group>"; };
+		6D93D5FF2733ECD300B32551 /* NewSystemUnifiedLogDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSystemUnifiedLogDestination.swift; sourceTree = "<group>"; };
 		6D93D6042733F0D300B32551 /* OldSystemUnifiedLogDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldSystemUnifiedLogDestination.swift; sourceTree = "<group>"; };
-		6D93D609273414FA00B32551 /* SysLogDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SysLogDestination.swift; sourceTree = "<group>"; };
+		6D93D66727352C5200B32551 /* Signposter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signposter.swift; sourceTree = "<group>"; };
+		6D93D66927352DF600B32551 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		6D93D66B27353B9500B32551 /* SignpostLoggingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignpostLoggingType.swift; sourceTree = "<group>"; };
+		6D93D66D27353CFA00B32551 /* MultiplexSystemLogDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplexSystemLogDestination.swift; sourceTree = "<group>"; };
+		6D93D66F27354C8A00B32551 /* SignpostID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignpostID.swift; sourceTree = "<group>"; };
+		6D93D67327354D8900B32551 /* SignpostIntervalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignpostIntervalState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +127,7 @@
 		6D8622A3272EF243008F25F3 = {
 			isa = PBXGroup;
 			children = (
+				6D93D66627352C2F00B32551 /* Signposter */,
 				6D8D9DFC272EFA0700F90C3A /* Logger */,
 				6D8D9DFB272EFA0700F90C3A /* Products */,
 			);
@@ -135,6 +146,7 @@
 			children = (
 				6D8D9E84272F616600F90C3A /* Logger.swift */,
 				6D8D9E83272F616600F90C3A /* LogLevel.swift */,
+				6D93D66927352DF600B32551 /* Log.swift */,
 				6D8D9E8D273015F000F90C3A /* Destination */,
 				6D8D9E5E272F187400F90C3A /* Message */,
 				6D8D9E34272F0B2000F90C3A /* Formatting */,
@@ -194,9 +206,9 @@
 			isa = PBXGroup;
 			children = (
 				6D8D9E8E273015F000F90C3A /* LogDestination.swift */,
-				6D93D5FF2733ECD300B32551 /* SystemUnifiedLogDestination.swift */,
+				6D93D66D27353CFA00B32551 /* MultiplexSystemLogDestination.swift */,
+				6D93D5FF2733ECD300B32551 /* NewSystemUnifiedLogDestination.swift */,
 				6D93D6042733F0D300B32551 /* OldSystemUnifiedLogDestination.swift */,
-				6D93D609273414FA00B32551 /* SysLogDestination.swift */,
 			);
 			path = Destination;
 			sourceTree = "<group>";
@@ -236,6 +248,17 @@
 				6D5B7930273179250035A5BE /* BytesFormatter.swift */,
 			);
 			path = ExtendedInt;
+			sourceTree = "<group>";
+		};
+		6D93D66627352C2F00B32551 /* Signposter */ = {
+			isa = PBXGroup;
+			children = (
+				6D93D66727352C5200B32551 /* Signposter.swift */,
+				6D93D66F27354C8A00B32551 /* SignpostID.swift */,
+				6D93D66B27353B9500B32551 /* SignpostLoggingType.swift */,
+				6D93D67327354D8900B32551 /* SignpostIntervalState.swift */,
+			);
+			path = Signposter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,13 +349,14 @@
 				6D8D9E4A272F0B2100F90C3A /* LogInt32ExtendedFormat.swift in Sources */,
 				6D93D5FB27335D7A00B32551 /* LevelFormatter.swift in Sources */,
 				6D8D9ED72730BDED00F90C3A /* FileAccessMask.swift in Sources */,
-				6D93D6002733ECD300B32551 /* SystemUnifiedLogDestination.swift in Sources */,
+				6D93D6002733ECD300B32551 /* NewSystemUnifiedLogDestination.swift in Sources */,
 				6D8D9E5A272F0B2100F90C3A /* LogIntegerFormatting.swift in Sources */,
 				6D8D9EA827301B8500F90C3A /* FixedWidthIntegerExtendedFormatter.swift in Sources */,
 				6D8D9EA327301AFD00F90C3A /* FixedWidthIntegerFormatter.swift in Sources */,
 				6D5B793B2731D5790035A5BE /* MessageFormatter.swift in Sources */,
 				6D8D9E8F273015F000F90C3A /* LogDestination.swift in Sources */,
 				6D93D5E72732BF9000B32551 /* TypeFormatter.swift in Sources */,
+				6D93D67427354D8900B32551 /* SignpostIntervalState.swift in Sources */,
 				6D8D9E6A272F239400F90C3A /* InterpolatingObjectContainer.swift in Sources */,
 				6D5B794F2732ACA20035A5BE /* PrivacyFormatter.swift in Sources */,
 				6D8D9E42272F0B2100F90C3A /* LogBoolFormat.swift in Sources */,
@@ -341,26 +365,30 @@
 				6D8D9E89272F616600F90C3A /* Logger.swift in Sources */,
 				6D8D9E65272F187400F90C3A /* LogMessageInterpolation.swift in Sources */,
 				6D5B79452731E6F80035A5BE /* FormatterFactory.swift in Sources */,
+				6D93D66A27352DF600B32551 /* Log.swift in Sources */,
 				6D8D9EB227301BF700F90C3A /* RawPointerFormatter.swift in Sources */,
 				6D8D9EBE27307FDF00F90C3A /* IP4AddressFormatter.swift in Sources */,
 				6D8D9E56272F0B2100F90C3A /* LogPointerFormat.swift in Sources */,
 				6D8D9DFF272EFA0700F90C3A /* Logger.docc in Sources */,
 				6D8D9EC32730840B00F90C3A /* FixedWidthIntegerDateFormatter.swift in Sources */,
+				6D93D66827352C5200B32551 /* Signposter.swift in Sources */,
 				6D5B79362731B03A0035A5BE /* RawBufferPointerFormatter.swift in Sources */,
 				6D8D9EB82730411500F90C3A /* Formatter.swift in Sources */,
 				6D8D9E61272F187400F90C3A /* LogMessage.swift in Sources */,
 				6D8D9E9E27301AA000F90C3A /* AlignmentFormatter.swift in Sources */,
+				6D93D66E27353CFA00B32551 /* MultiplexSystemLogDestination.swift in Sources */,
 				6D8D9E4E272F0B2100F90C3A /* LogStringAlignment.swift in Sources */,
 				6D8D9EC827308FDB00F90C3A /* DarwinErrnoFormatter.swift in Sources */,
 				6D8D9E942730195900F90C3A /* BinaryFloatingFormatter.swift in Sources */,
 				6D5B7931273179250035A5BE /* BytesFormatter.swift in Sources */,
-				6D93D60A273414FA00B32551 /* SysLogDestination.swift in Sources */,
+				6D93D66C27353B9500B32551 /* SignpostLoggingType.swift in Sources */,
 				6D8D9E6F272F24BC00F90C3A /* InterpolatingObject.swift in Sources */,
 				6D8D9ECD2730B70700F90C3A /* DarwinSignalFormatter.swift in Sources */,
 				6D8D9ED22730B95500F90C3A /* DarwinModeFormatter.swift in Sources */,
 				6D8D9E85272F616600F90C3A /* LogLevel.swift in Sources */,
 				6D93D5F627335B1100B32551 /* LogMessageFormattingOptions.swift in Sources */,
 				6D8D9E7A272F2BD100F90C3A /* AppendClosure.swift in Sources */,
+				6D93D67027354C8A00B32551 /* SignpostID.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
