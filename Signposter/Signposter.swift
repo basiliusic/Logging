@@ -8,11 +8,11 @@
 import os
 
 @available(iOS 12, macOS 10.14, tvOS 12, watchOS 5, *)
-class Signposter {
+public class Signposter {
   
   // MARK: - Properties
   
-  static var disabled: Self {
+  public static var disabled: Self {
     let signpost = Self.init(logHandle: .disabled)
     signpost.isEnabled = false
     
@@ -21,6 +21,16 @@ class Signposter {
   
   public private(set) var isEnabled: Bool = true
   var logType: SignpostLoggingType
+  lazy var logHandle: OSLog = {
+    switch logType {
+    case .custom(let subsystem, let category):
+      return .init(subsystem: subsystem, category: category)
+    case .logger(let logger):
+      return .init(subsystem: logger.subsystem, category: logger.category)
+    case .logHandler(let handler):
+      return handler.systemLog
+    }
+  }()
   
   @available(iOS 15, macOS 12, tvOS 15, watchOS 8, *)
   lazy var signposter: OSSignposter = {
@@ -36,27 +46,27 @@ class Signposter {
   
   // MARK: - Life cycle
   
-  convenience init() {
+  public convenience init() {
     self.init(logHandle: .default)
   }
   
-  init(subsystem: String, category: String) {
+  public init(subsystem: String, category: String) {
     logType = .custom(subsystem: subsystem, category: category)
   }
   
-  init(subsystem: String, category: Log.Category) {
+  public init(subsystem: String, category: Log.Category) {
     logType = .custom(
       subsystem: subsystem,
       category: category.rawValue
     )
   }
   
-  required init(logger: Logger) {
+  public required init(logger: Logger) {
     logType = .logger(logger: logger)
   }
   
-  required init(logHandle: Log) {
-    logType = .logHandler(log: logHandle)
+  public required init(logHandle: Log) {
+    logType = .logHandler(handler: logHandle)
   }
   
   // MARK: - Generating Signpost IDs
@@ -92,20 +102,9 @@ class Signposter {
       return .null
     }
     
-    var log: OSLog = .init(subsystem: "", category: .pointsOfInterest)
-    
-    switch logType {
-    case .custom(let subsystem, let category):
-      log = .init(subsystem: subsystem, category: category)
-    case .logger(let logger):
-      log = .init(subsystem: logger.subsystem, category: logger.category)
-    case .logHandler(let logger):
-      log = logger.systemLog
-    }
-    
     return .init(
       system: .init(
-        log: log,
+        log: logHandle,
         object: object
       )
     )
@@ -115,6 +114,7 @@ class Signposter {
   
   public func beginInterval(
     _ name: StaticString,
+    dso: UnsafeRawPointer = #dsohandle,
     id: SignpostID = .exclusive
   ) -> SignpostIntervalState {
     if #available(iOS 15, macOS 12, tvOS 15, watchOS 8, *) {
@@ -129,16 +129,20 @@ class Signposter {
       )
     }
     
-    guard isEnabled else {
-      fatalError()
-    }
+    os_signpost(
+      .begin,
+      dso: dso,
+      log: logHandle,
+      name: name,
+      signpostID: id.system
+    )
     
-    
-    fatalError()
+    return .init(id: id)
   }
   
   public func beginInterval(
     _ name: StaticString,
+    dso: UnsafeRawPointer = #dsohandle,
     id: SignpostID = .exclusive,
     _ message: LogMessage
   ) -> SignpostIntervalState {
@@ -162,17 +166,24 @@ class Signposter {
         id: id
       )
     }
+        
+    os_signpost(
+      .begin,
+      dso: dso,
+      log: logHandle,
+      name: name,
+      signpostID: id.system,
+      "%s",
+      formatted
+    )
     
-    guard isEnabled else {
-      fatalError()
-    }
-    
-    fatalError()
+    return .init(id: id)
   }
   
   public func beginAnimationInterval(
     _ name: StaticString,
-    id: SignpostID = .exclusive
+    id: SignpostID = .exclusive,
+    dso: UnsafeRawPointer = #dsohandle
   ) -> SignpostIntervalState {
     if #available(iOS 15, macOS 12, tvOS 15, watchOS 8, *) {
       let systemState = signposter.beginAnimationInterval(
@@ -184,17 +195,24 @@ class Signposter {
         system: systemState,
         id: id
       )
+    } else if #available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *) {
+      os_signpost(
+        .animationBegin,
+        dso: dso,
+        log: logHandle,
+        name: name,
+        signpostID: id.system
+      )
     }
     
-    guard isEnabled else {
-      fatalError()
-    }
+    // Unavailable on iOS 13 and early
     
-    fatalError()
+    return .init(id: id)
   }
   
   public func beginAnimationInterval(
     _ name: StaticString,
+    dso: UnsafeRawPointer = #dsohandle,
     id: SignpostID = .exclusive,
     _ message: LogMessage
   ) -> SignpostIntervalState {
@@ -217,20 +235,27 @@ class Signposter {
         system: systemState,
         id: id
       )
+    } else if #available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *) {
+      os_signpost(
+        .animationBegin,
+        log: logHandle,
+        name: name,
+        "%s",
+        formatted
+      )
     }
     
-    guard isEnabled else {
-      fatalError()
-    }
+    // Unavailable on iOS 13 and early
     
-    fatalError()
+    return .init(id: id)
   }
   
   // MARK: - Stopping a Signposted Interval
   
   public func endInterval(
     _ name: StaticString,
-    _ state: SignpostIntervalState
+    _ state: SignpostIntervalState,
+    dso: UnsafeRawPointer = #dsohandle
   ) {
     if #available(iOS 15, macOS 12, tvOS 15, watchOS 8, *) {
       signposter.endInterval(
@@ -243,13 +268,20 @@ class Signposter {
       return
     }
     
-    fatalError()
+    os_signpost(
+      .end,
+      dso: dso,
+      log: logHandle,
+      name: name,
+      signpostID: state.id.system
+    )
   }
   
   public func endInterval(
     _ name: StaticString,
     _ state: SignpostIntervalState,
-    _ message: LogMessage
+    _ message: LogMessage,
+    dso: UnsafeRawPointer = #dsohandle
   ) {
     let formatter = MessageFormatter(
       formatterFactory: FormatterFactory(),
@@ -267,17 +299,22 @@ class Signposter {
       )
     }
     
-    guard isEnabled else {
-      return
-    }
-    
-    fatalError()
+    os_signpost(
+      .end,
+      dso: dso,
+      log: logHandle,
+      name: name,
+      signpostID: state.id.system,
+      "%s",
+      formatted
+    )
   }
   
   // MARK: - Measuring a Closure
   
   public func withIntervalSignpost<T>(
     _ name: StaticString,
+    dso: UnsafeRawPointer = #dsohandle,
     id: SignpostID = .exclusive,
     around task: () throws -> T
   ) rethrows -> T {
@@ -289,15 +326,30 @@ class Signposter {
       )
     }
     
-    guard isEnabled else {
-      return try task()
-    }
-
-    fatalError()
+    os_signpost(
+      .begin,
+      dso: dso,
+      log: logHandle,
+      name: name,
+      signpostID: id.system
+    )
+    
+    let value = try task()
+    
+    os_signpost(
+      .end,
+      dso: dso,
+      log: logHandle,
+      name: name,
+      signpostID: id.system
+    )
+    
+    return value
   }
   
   public func withIntervalSignpost<T>(
     _ name: StaticString,
+    dso: UnsafeRawPointer = #dsohandle,
     id: SignpostID,
     _ message: LogMessage,
     around task: () throws -> T
@@ -319,18 +371,35 @@ class Signposter {
       )
     }
     
-    guard isEnabled else {
-      return try task()
-    }
+    os_signpost(
+      .begin,
+      dso: dso,
+      log: logHandle,
+      name: name,
+      signpostID: id.system
+    )
     
-    fatalError()
+    let value = try task()
+    
+    os_signpost(
+      .end,
+      dso: dso,
+      log: logHandle,
+      name: name,
+      signpostID: id.system,
+      "%s",
+      formatted
+    )
+    
+    return value
   }
   
   // MARK: - Emitting Individual Signposts
   
   public func emitEvent(
     _ name: StaticString,
-    id: SignpostID = .exclusive
+    id: SignpostID = .exclusive,
+    dso: UnsafeRawPointer = #dsohandle
   ) {
     if #available(iOS 15, macOS 12, tvOS 15, watchOS 8, *) {
       signposter.emitEvent(
@@ -343,11 +412,18 @@ class Signposter {
       return
     }
     
-    fatalError()
+    os_signpost(
+      .event,
+      dso: dso,
+      log: logHandle,
+      name: name,
+      signpostID: id.system
+    )
   }
   
   public func emitEvent(
     _ name: StaticString,
+    dso: UnsafeRawPointer = #dsohandle,
     id: SignpostID = .exclusive,
     _ message: LogMessage
   ) {
@@ -371,7 +447,15 @@ class Signposter {
       )
     }
     
-    fatalError()
+    os_signpost(
+      .event,
+      dso: dso,
+      log: logHandle,
+      name: name,
+      signpostID: id.system,
+      "%s",
+      formatted
+    )
   }
   
 }

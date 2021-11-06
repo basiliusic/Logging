@@ -12,15 +12,15 @@ public struct SignpostID {
 
   // MARK: - Properties
 
-  static let exclusive: Self = {
+  public static let exclusive: Self = {
     return Self(system: .exclusive)
   }()
   
-  static let invalid: Self = {
+  public static let invalid: Self = {
     return Self(system: .invalid)
   }()
   
-  static let null: Self = {
+  public static let null: Self = {
     return Self(system: .null)
   }()
   
