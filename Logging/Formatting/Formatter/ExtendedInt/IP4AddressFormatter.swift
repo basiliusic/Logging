@@ -7,6 +7,10 @@
 
 struct IP4AddressFormatter<T: FixedWidthInteger>: Formatter {
   
+  // MARK: - Types
+  
+  typealias Value = UInt32
+  
   // MARK: - Properties
   
   var integer: T
@@ -15,18 +19,19 @@ struct IP4AddressFormatter<T: FixedWidthInteger>: Formatter {
   // MARK: - Formatter
   
   var formatted: String {
-    let intValue = Int32(integer)
-    let mask = Int32(0xFF)
+    let intValue = Value(integer)
+    let mask = Value(0xFF)
     
     let addressString = (0..<4)
-      .map { (index) -> Int8 in
-        let shiftSize = index * 4
+      .map { (index) -> Value in
+        let shiftSize = index * 8
         let shiftedValue = intValue >> shiftSize
         let byte = shiftedValue & mask
         
-        return Int8(byte)
+        return byte
       }
       .map { FixedWidthIntegerFormatter(integer: $0, format: format).formatted }
+      .reversed()
       .joined(separator: ".")
     
     return addressString

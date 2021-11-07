@@ -11,7 +11,7 @@ struct DarwinModeFormatter<T: FixedWidthInteger>: Formatter {
   
   var integer: T
   
-  let fullModeString = "drwxrwxrwx"
+  let fullModeString = "drwxrwxrwx".map { String($0) }
   
   let enumeratedModes: [FileAccessMask] = [
     // Directory
@@ -34,22 +34,15 @@ struct DarwinModeFormatter<T: FixedWidthInteger>: Formatter {
   
   var formatted: String {
     let mode = Int32(integer)
-    var formatted = "----------"
     
-    enumeratedModes.enumerated().forEach { (offset, mask) in
-      let enabledFlagStartRange = fullModeString.index(fullModeString.startIndex, offsetBy: offset)
-      let enabledFlagEndRange = fullModeString.index(after: enabledFlagStartRange)
-      let enabledFlag = String(fullModeString[enabledFlagStartRange...enabledFlagEndRange])
-      
-      let replaceIndex = formatted.index(formatted.startIndex, offsetBy: offset)
-      
-      let flag = mask.mask(with: mode) > 0 ? enabledFlag : "-"
-      
-      formatted.replaceSubrange(
-        replaceIndex...formatted.index(after: replaceIndex),
-        with: flag
-      )
-    }
+    let formatted = enumeratedModes.enumerated()
+      .map { (offset, mask) -> String in
+        let enabledFlag = fullModeString[offset]
+        let disabledFlag = "-"
+        
+        return mask.mask(with: mode) > 0 ? enabledFlag : disabledFlag
+      }
+      .joined()
     
     return formatted
   }
