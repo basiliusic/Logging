@@ -13,9 +13,22 @@ import UIKit
 
 final class FormatterFactory {
     
+  // MARK: - Types
+  
+  enum PrivacyMode {
+    case `default`
+    case alwaysPublic
+  }
+  
   // MARK: - Properties
   
-  static var privacyIsAlwaysPublic: Bool = false
+  var privacyMode: PrivacyMode
+  
+  // MARK: - Life cycle
+  
+  init(privacyMode: PrivacyMode) {
+    self.privacyMode = privacyMode
+  }
   
   // MARK: - Factory
   
@@ -243,14 +256,21 @@ final class FormatterFactory {
     align: LogStringAlignment,
     privacy: LogPrivacy
   ) -> Formatter {
-    let privacy = PrivacyFormatter(
-      formatter: formatter,
-      privacy: Self.privacyIsAlwaysPublic ? .public : privacy,
-      objectType: objectType
-    )
+    let firstFormatter: Formatter
+    
+    switch privacyMode {
+    case .default:
+      firstFormatter = PrivacyFormatter(
+        formatter: formatter,
+        privacy: privacy,
+        objectType: objectType
+      )
+    case .alwaysPublic:
+      firstFormatter = formatter
+    }
     
     return AlignmentFormatter(
-      formatter: privacy,
+      formatter: firstFormatter,
       align: .none
     )
   }

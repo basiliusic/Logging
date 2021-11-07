@@ -1,21 +1,17 @@
 //
-//  DarwinSignalFormatter.swift
-//  Logger
+//  DarwinSgnal.swift
+//  Logging
 //
-//  Created by basilic on 02.11.2021.
+//  Created by basilic on 07.11.2021.
 //
 
-struct DarwingSignalFormatter<T: FixedWidthInteger>: Formatter {
+struct DarwinSignal {
   
   // MARK: - Types
   
-  typealias Signal = Int8
+  typealias Code = UInt8
   
-  // MARK: - Properties
-  
-  var integer: T
-  
-  let keys: [Signal: String] = [
+  static let keys: [Code: String] = [
     1:    "SIGHUP",
     2:    "SIGINT",
     3:    "SIGQUIT",
@@ -49,7 +45,7 @@ struct DarwingSignalFormatter<T: FixedWidthInteger>: Formatter {
     31:   "SIGUSR2",
   ]
   
-  let descriptions: [Signal: String] = [
+  static let descriptions: [Code: String] = [
     1:    "terminal line hangup",
     2:    "interrupt program",
     3:    "quit program",
@@ -83,23 +79,26 @@ struct DarwingSignalFormatter<T: FixedWidthInteger>: Formatter {
     31:   "User defined signal 2",
   ]
   
-  // MARK: - Formatter
+  // MARK: - Properties
   
-  var formatted: String {
-    let signal = Signal(integer)
-    
-    var formattedError: String = "[\(signal): Undefined signal]"
-    
-    var key = keys[signal] ?? ""
-    if !key.isEmpty {
-      key = "(\(key))"
-    }
-    
-    if let description = descriptions[signal] {
-      formattedError = "[\(signal) \(key): \(description)]"
-    }
-    
-    return formattedError
+  var code: Code
+  
+  var isDefined: Bool {
+    Self.keys[code] != nil && Self.descriptions[code] != nil
+  }
+  
+  var key: String {
+    return Self.keys[code] ?? ""
+  }
+  
+  var desciption: String {
+    return Self.descriptions[code] ?? ""
+  }
+  
+  // MARK: - Life cycle
+  
+  init<T: FixedWidthInteger>(_ value: T) {
+    self.code = Code(value)
   }
   
 }

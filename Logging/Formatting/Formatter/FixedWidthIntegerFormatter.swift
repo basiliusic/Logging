@@ -42,9 +42,13 @@ struct FixedWidthIntegerFormatter<T: FixedWidthInteger>: Formatter {
   var prefix: String {
     var prefix = ""
     
+    guard format.includePrefix else {
+      return prefix
+    }
+    
     switch format.format {
     case .octal: prefix = "0o"
-    case .hex: prefix = format.uppercase ? "0X" : "0x"
+    case .hex: prefix = "0x"
     default:()
     }
     

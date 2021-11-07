@@ -1,21 +1,17 @@
 //
-//  DarwinErrnoFormatter.swift
-//  Logger
+//  DarwinErrNo.swift
+//  Logging
 //
-//  Created by basilic on 02.11.2021.
+//  Created by basilic on 07.11.2021.
 //
 
-struct DarwingErrnoFormatter<T: FixedWidthInteger>: Formatter {
+struct DarwinErrNo {
   
   // MARK: - Types
   
-  typealias ErrNo = Int8
+  typealias Code = UInt8
   
-  // MARK: - Properties
-  
-  var integer: T
-  
-  let keys: [ErrNo: String] = [
+  static let keys: [Code: String] = [
     0:   "",
     1:   "EPERM",
     2:   "ENOENT",
@@ -119,7 +115,7 @@ struct DarwingErrnoFormatter<T: FixedWidthInteger>: Formatter {
     102: "EOPNOTSUPP",
   ]
   
-  let descriptions: [ErrNo: String] = [
+  static let descriptions: [Code: String] = [
     0:   "Error 0",
     1:   "Operation not permitted",
     2:   "No such file or directory",
@@ -223,23 +219,26 @@ struct DarwingErrnoFormatter<T: FixedWidthInteger>: Formatter {
     102: "Operation not supported on socket",
   ]
   
-  // MARK: - Formatter
+  // MARK: - Properties
   
-  var formatted: String {
-    let errNo = ErrNo(integer)
-    
-    var formattedError: String = "[\(errNo): Undefined error]"
-    
-    var key = keys[errNo] ?? ""
-    if !key.isEmpty {
-      key = "(\(key))"
-    }
-    
-    if let description = descriptions[errNo] {
-      formattedError = "[\(errNo) \(key): \(description)]"
-    }
-    
-    return formattedError
+  var code: Code
+  
+  var isDefined: Bool {
+    Self.keys[code] != nil && Self.descriptions[code] != nil
+  }
+  
+  var key: String {
+    return Self.keys[code] ?? ""
+  }
+  
+  var desciption: String {
+    return Self.descriptions[code] ?? ""
+  }
+  
+  // MARK: - Life cycle
+  
+  init<T: FixedWidthInteger>(_ value: T) {
+    self.code = Code(value)
   }
   
 }

@@ -13,8 +13,8 @@ struct FixedWidthIntegerExtendedFormatter<T: FixedWidthInteger>: Formatter {
     didSet {
       ipAddressFormatter.integer = integer
       dateFormatter.integer = integer
-      darwinErrNoFormatter.integer = integer
-      darwinSignalFormatter.integer = integer
+      darwinErrNoFormatter.errNo = .init(integer)
+      darwinSignalFormatter.signal = .init(integer)
       darwinModeFormatter.integer = integer
       bytesFormatter.integer = integer
       boolFormatter.value = Int64(integer) != 0
@@ -29,7 +29,7 @@ struct FixedWidthIntegerExtendedFormatter<T: FixedWidthInteger>: Formatter {
   
   private var ipAddressFormatter: IP4AddressFormatter<T>
   private var dateFormatter: FixedWidthIntegerDateFormatter<T>
-  private var darwinErrNoFormatter: FixedWidthIntegerDateFormatter<T>
+  private var darwinErrNoFormatter: DarwingErrnoFormatter<T>
   private var darwinSignalFormatter: DarwingSignalFormatter<T>
   private var darwinModeFormatter: DarwinModeFormatter<T>
   private var bytesFormatter: BytesFormatter<T>
