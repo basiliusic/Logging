@@ -20,10 +20,7 @@ public final class Logger {
   
   public static var overrideAutoPrivacy: LogPrivacy = .auto
 
-  public static var privacyIsAlwaysPublic: Bool {
-    get { FormatterFactory.privacyIsAlwaysPublic }
-    set { FormatterFactory.privacyIsAlwaysPublic = newValue }
-  }
+  public static var privacyIsAlwaysPublic: Bool = false
   
   public static var timestampFormatter: DateFormatter = {
     let formatter = DateFormatter()
@@ -66,8 +63,9 @@ public final class Logger {
     function: String = #function,
     line: Int = #line
   ) {
+    let privacyMode: FormatterFactory.PrivacyMode = Self.privacyIsAlwaysPublic ? .alwaysPublic : .default
     let formatter = MessageFormatter(
-      formatterFactory: FormatterFactory(),
+      formatterFactory: FormatterFactory(privacyMode: privacyMode),
       timestampFormatter: Self.timestampFormatter,
       subsystem: subsystem,
       category: category,

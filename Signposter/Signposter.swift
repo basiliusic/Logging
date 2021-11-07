@@ -147,7 +147,7 @@ public class Signposter {
     _ message: LogMessage
   ) -> SignpostIntervalState {
     let formatter = MessageFormatter(
-      formatterFactory: FormatterFactory(),
+      formatterFactory: FormatterFactory(privacyMode: .alwaysPublic),
       message: message,
       level: .info
     )
@@ -217,7 +217,7 @@ public class Signposter {
     _ message: LogMessage
   ) -> SignpostIntervalState {
     let formatter = MessageFormatter(
-      formatterFactory: FormatterFactory(),
+      formatterFactory: FormatterFactory(privacyMode: .alwaysPublic),
       message: message,
       level: .info
     )
@@ -284,7 +284,7 @@ public class Signposter {
     dso: UnsafeRawPointer = #dsohandle
   ) {
     let formatter = MessageFormatter(
-      formatterFactory: FormatterFactory(),
+      formatterFactory: FormatterFactory(privacyMode: .alwaysPublic),
       message: message,
       level: .info
     )
@@ -355,7 +355,7 @@ public class Signposter {
     around task: () throws -> T
   ) rethrows -> T {
     let formatter = MessageFormatter(
-      formatterFactory: FormatterFactory(),
+      formatterFactory: FormatterFactory(privacyMode: .alwaysPublic),
       message: message,
       level: .info
     )
@@ -428,7 +428,7 @@ public class Signposter {
     _ message: LogMessage
   ) {
     let formatter = MessageFormatter(
-      formatterFactory: FormatterFactory(),
+      formatterFactory: FormatterFactory(privacyMode: .alwaysPublic),
       message: message,
       level: .info
     )
