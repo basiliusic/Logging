@@ -4,17 +4,18 @@ Capture telemetry from your app for debugging and performance analysis using the
 
 ## Overview
 
-Library is a wrapper of the ```OSLog.Logger``` and ```os_log*``` methods.
+Library is a wrapper of the ```OSLog.Logger``` and ```Signposter```.
 All methods and types are same as new unified log system. So you can remove it with small changes, when it will be necessary.
+The library was created to avoid multiple ```if #available(...)``` code.
 
-## Requirements
+## Logging
 
-- iOS 10.0+ / Mac OS X 10.12+ / tvOS 10.0+ / watch OS 3.0+
-- Xcode 13+
-- Swift 5.5
+### Summary
 
-## Implementation
-### Base types wrapping
+Log library wrapper. Interpolates and sends messages as whole string to the unified system.
+It's not same optimized as wrapped system library.
+
+### Types wrapping
 
 - [x] Logger - An object for writing interpolated string messages to the unified logging system.
 - [x] OSLog - A container of related log messages.
@@ -30,6 +31,7 @@ All methods and types are same as new unified log system. So you can remove it w
 - [x] OSLogInterpolation - A container for the elements of a log message. (overwritten)
 
 ### Formatters
+
 - [x] Privacy
 - [x] Floating numbers
 - [x] Integers
@@ -45,3 +47,30 @@ All methods and types are same as new unified log system. So you can remove it w
 - [x] Darwin signals
 - [x] Darwin errors
 - [x] IPv4 address
+
+### Requirements
+
+- iOS 10.0+ / Mac OS X 10.12+ / tvOS 10.0+ / watch OS 3.0+
+- Xcode 13+
+- Swift 5.5
+
+## Signposter
+
+### Summary
+
+Wrapper of the OSSignposter that downgrade requirements for library. When you use in old systems (iOS 12 etc.) library calls old implementation of signposts. Uses ```Logging``` message interpolation, so it's also slow. Logs all data avoiding privacy formatting.
+Note: ```Signposter.beginAnimationInterval(...)``` availability is same as library but it works from ```iOS 14.0+ / Mac OS X 11.0+ / tvOS 14+, watch OS 7.0+```, in older versions method is ignored.
+
+The library was created to avoid multiple ```if #available(...)``` code.
+
+### Types wrapping
+
+- [x] OSSignposter - An object for measuring task performance using the unified logging system.
+- [x] OSSignpostID - An identifier that disambiguates signposted intervals.
+- [x] OSSignpostIntervalState - An object that tracks the state of a signposted interval.
+
+### Requirements
+
+- iOS 12.0+ / Mac OS X 10.14+ / tvOS 12.0+ / watch OS 5.0+
+- Xcode 13+
+- Swift 5.5
