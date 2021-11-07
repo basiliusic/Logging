@@ -59,7 +59,8 @@ It's not same optimized as wrapped system library.
 
 ### Summary
 
-Wrapper of the OSSignposter that downgrade requirements for library. When you use in old systems (iOS 12 etc.) library calls old implementation of signposts. Uses ```Logging``` message interpolation, so it's also slow, and is presented in instruments as signle string. Logs all data avoiding privacy formatting.
+Wrapper of the OSSignposter that downgrade requirements for library. When you use in old systems (iOS 12 etc.) library calls old implementation of signposts. Uses ```Logging``` message interpolation, so it's also slow, and is presented in instruments as signle string. Logs all data avoiding privacy formatting. 
+
 Note: ```Signposter.beginAnimationInterval(...)``` availability is same as library but it works from ```iOS 14.0+ / Mac OS X 11.0+ / tvOS 14+, watch OS 7.0+```, in older versions method is ignored.
 
 ### Types wrapping
