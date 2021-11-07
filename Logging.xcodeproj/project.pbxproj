@@ -71,6 +71,8 @@
 		6DA487E82737CA3900C2F5E4 /* FixedWidthIntegerFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA487E72737CA3900C2F5E4 /* FixedWidthIntegerFormatterTests.swift */; };
 		6DA487EB2737DDA300C2F5E4 /* IP4AddressFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA487EA2737DDA300C2F5E4 /* IP4AddressFormatterTests.swift */; };
 		6DA487ED2737E48F00C2F5E4 /* DarwinModeFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA487EC2737E48F00C2F5E4 /* DarwinModeFormatterTests.swift */; };
+		6DA487EF273823BA00C2F5E4 /* DarwinErrNo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA487EE273823BA00C2F5E4 /* DarwinErrNo.swift */; };
+		6DA487F12738294200C2F5E4 /* DarwinSgnal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA487F02738294200C2F5E4 /* DarwinSgnal.swift */; };
 		6DB98452273755D700F581CD /* BoolFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB98451273755D700F581CD /* BoolFormatterTests.swift */; };
 		6DB98454273758D200F581CD /* AlignmentFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB98453273758D200F581CD /* AlignmentFormatterTests.swift */; };
 /* End PBXBuildFile section */
@@ -152,6 +154,8 @@
 		6DA487E72737CA3900C2F5E4 /* FixedWidthIntegerFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedWidthIntegerFormatterTests.swift; sourceTree = "<group>"; };
 		6DA487EA2737DDA300C2F5E4 /* IP4AddressFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IP4AddressFormatterTests.swift; sourceTree = "<group>"; };
 		6DA487EC2737E48F00C2F5E4 /* DarwinModeFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarwinModeFormatterTests.swift; sourceTree = "<group>"; };
+		6DA487EE273823BA00C2F5E4 /* DarwinErrNo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarwinErrNo.swift; sourceTree = "<group>"; };
+		6DA487F02738294200C2F5E4 /* DarwinSgnal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarwinSgnal.swift; sourceTree = "<group>"; };
 		6DB98451273755D700F581CD /* BoolFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolFormatterTests.swift; sourceTree = "<group>"; };
 		6DB98453273758D200F581CD /* AlignmentFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignmentFormatterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -251,6 +255,8 @@
 				6D8D9E79272F2BD100F90C3A /* AppendClosure.swift */,
 				6D8D9E7E272F3B7400F90C3A /* RawPointerContainer.swift */,
 				6D8D9ED62730BDED00F90C3A /* FileAccessMask.swift */,
+				6DA487EE273823BA00C2F5E4 /* DarwinErrNo.swift */,
+				6DA487F02738294200C2F5E4 /* DarwinSgnal.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -484,6 +490,7 @@
 				6D8D9E5A272F0B2100F90C3A /* LogIntegerFormatting.swift in Sources */,
 				6D8D9EA827301B8500F90C3A /* FixedWidthIntegerExtendedFormatter.swift in Sources */,
 				6D8D9EA327301AFD00F90C3A /* FixedWidthIntegerFormatter.swift in Sources */,
+				6DA487EF273823BA00C2F5E4 /* DarwinErrNo.swift in Sources */,
 				6D5B793B2731D5790035A5BE /* MessageFormatter.swift in Sources */,
 				6D8D9E8F273015F000F90C3A /* LogDestination.swift in Sources */,
 				6D93D5E72732BF9000B32551 /* TypeFormatter.swift in Sources */,
@@ -509,6 +516,7 @@
 				6D8D9E9E27301AA000F90C3A /* AlignmentFormatter.swift in Sources */,
 				6D93D66E27353CFA00B32551 /* MultiplexSystemLogDestination.swift in Sources */,
 				6D8D9E4E272F0B2100F90C3A /* LogStringAlignment.swift in Sources */,
+				6DA487F12738294200C2F5E4 /* DarwinSgnal.swift in Sources */,
 				6D8D9EC827308FDB00F90C3A /* DarwinErrnoFormatter.swift in Sources */,
 				6D8D9E942730195900F90C3A /* BinaryFloatingFormatter.swift in Sources */,
 				6D5B7931273179250035A5BE /* BytesFormatter.swift in Sources */,
