@@ -18,6 +18,8 @@ public final class Logger {
       
   // MARK: - Properties
   
+  public static var overrideAutoPrivacy: LogPrivacy = .auto
+
   public static var privacyIsAlwaysPublic: Bool {
     get { FormatterFactory.privacyIsAlwaysPublic }
     set { FormatterFactory.privacyIsAlwaysPublic = newValue }

@@ -15,9 +15,23 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6D8D9DF9272EFA0700F90C3A"
-               BuildableName = "Logger.framework"
-               BlueprintName = "Logger"
-               ReferencedContainer = "container:Logger.xcodeproj">
+               BuildableName = "Logging.framework"
+               BlueprintName = "Logging"
+               ReferencedContainer = "container:Logging.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6D93D68B27371A7000B32551"
+               BuildableName = "LoggingTests.xctest"
+               BlueprintName = "LoggingTests"
+               ReferencedContainer = "container:Logging.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,6 +42,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6D93D68B27371A7000B32551"
+               BuildableName = "LoggingTests.xctest"
+               BlueprintName = "LoggingTests"
+               ReferencedContainer = "container:Logging.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -51,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6D8D9DF9272EFA0700F90C3A"
-            BuildableName = "Logger.framework"
-            BlueprintName = "Logger"
-            ReferencedContainer = "container:Logger.xcodeproj">
+            BuildableName = "Logging.framework"
+            BlueprintName = "Logging"
+            ReferencedContainer = "container:Logging.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
